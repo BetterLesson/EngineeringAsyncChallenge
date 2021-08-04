@@ -1,0 +1,13 @@
+#mailing-list-form-container {
+    background-image: radial-gradient(rgb(0,0,150), rgb(0,0,150)), url('../../media/mailinglist.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: screen;
+    width: 1010px;
+    height: 378px;
+}
+
+#industry-field {
+    width: 75%;
+}
+

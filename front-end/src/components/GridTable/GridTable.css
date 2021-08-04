@@ -1,0 +1,8 @@
+.MuiDataGrid-columnHeaderTitle {
+    font-weight: bold !important;
+}
+
+.fullWidthDiv {
+    width: 100%;
+    height: 100%;
+}
