@@ -1,0 +1,26 @@
+[
+    {
+        "UUID": 12345678,
+        "Customer Name": "Jane Doe",
+        "Cell Phone": "405.867.5309",
+        "Email": "jane_teacher@gmail.com",
+        "Address": "123 School Way, Dallas TX 75001",
+        "Coaching Service ID": [37,2002,101],
+        "Book Set ID": [22,21],
+        "Order Total": 37.99,
+        "Order Date": "12/25/22T23:00:05Z",
+        "Discount Code": "CHEAP"
+    },
+    {
+        "UUID": 12345679,
+        "Customer Name": "Bob Doe",
+        "Cell Phone": "405.867.5308",
+        "Email": "bob_principal@gmail.com",
+        "Address": "123 School Way, Dallas TX 75001",
+        "Coaching Service ID": [38,2003,102],
+        "Book Set ID": [22,212],
+        "Order Total": 37.98,
+        "Order Date": "12/25/22T23:00:05Z",
+        "Discount Code": "NONE"
+    }
+]
