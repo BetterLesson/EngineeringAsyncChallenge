@@ -1,0 +1,4 @@
+Flask
+Flask-Marshmallow
+marshmallow
+pytest
