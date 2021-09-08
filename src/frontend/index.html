@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="media/BL_LogoBasic.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+          rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <title>BetterLesson</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="fs-1">BetterLesson Professional Coaching</h1>
+        <p class="tagline">Professional Coach Seminars &amp; Mentorship</p>
+
+        <h2 class="text-center fs-2">Current Coaches</h2>
+
+        <div class="row" id="heading">
+            <div class="col-4 fw-bold border-bottom border-dark">Coach Name</div>
+            <div class="col-4 fw-bold border-bottom border-dark">Available Starting</div>
+            <div class="col-4 fw-bold border-bottom border-dark">Industry</div>
+        </div>
+
+        <div class="row">
+            <div class="col border-bottom border-dark">Jessica D.</div>
+            <div class="col border-bottom border-dark">11/6/22</div>
+            <div class="col border-bottom border-dark">Professional Services</div>
+        </div>
+
+        <div class="row">
+            <div class="col border-bottom border-dark">David F.</div>
+            <div class="col border-bottom border-dark">8/15/21</div>
+            <div class="col border-bottom border-dark">Sports/Fitness</div>
+        </div>
+
+        <div class="row">
+            <div class="col">Keir Y.</div>
+            <div class="col">4/12/22</div>
+            <div class="col">E-Sports</div>
+        </div>
+
+        <h2 class="text-center fs-2">Join our mailing list</h2>
+        <p>
+        Join our mailing list to recieve notifications about program
+        availability and special discounts.
+        </p>
+        <form>
+            <div class="mb-3">
+                <label for="mlName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="mlName"
+                       placeholder="Jane Doe" required>
+            </div>
+            <div class="mb-3">
+                <label for="mlEmail" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="mlEmail"
+                       placeholder="jane_doe@email.com" required>
+            </div>
+            <div class="mb-3">
+                <label for="mlIndustry" class="form-label">Email address</label>
+                <select id="mlIndustry" class="form-select">
+                    <option value="1" selected>Industry 1</option>
+                    <option value="2">Industry 2</option>
+                    <option value="3">Industry 3</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    </div>
+    <script src="dumpForm.js"></script>
+</body>
+</html>
