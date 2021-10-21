@@ -74,7 +74,7 @@ Note: this implementation wont scale. Dont use this in prod
 
 ## Running locally
 
-Run the command `docker compose up`
+Run the command `docker compose up` (if you are using dev containers, you should run this command on your host machine - the input filed does not get shared correctly in the dev container)
 - Input data has already been copied to docker-data/input.json
   - This file is shared with the docker container via a volume
 - Output file should appear at docker-data/output.sql
