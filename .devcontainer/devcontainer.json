@@ -1,0 +1,45 @@
+{
+    "name": "Docker from Docker Compose",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "aync-challenge-ide",
+    "workspaceFolder": "/workspace",
+    //
+    // "name": "Docker from Docker",
+    // "dockerFile": "Dockerfile",
+    // "runArgs": [
+    // 	"--init"
+    // ],
+    // "mounts": [
+    // 	"source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+    // ],
+    //"overrideCommand": false,
+    "remoteEnv": {
+        // Use this environment variable if you need to bind mount your local source code into a new container.
+        "LOCAL_WORKSPACE_FOLDER": "${localWorkspaceFolder}",
+        //AWS STUFF
+        "AWS_ENDPOINT_URL": "http://localstack:4566/",
+        "AWS_REGION": "us-east-1",
+        "AWS_COMMAND_QUEUE_NAME": "TestQueue",
+        "AWS_DDB_CONTIANER_EXECUTION_TABLE_NAME": "ContainerExecutions"
+    },
+    // Set *default* container specific settings.json values on container create.
+    "settings": {},
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-dotnettools.csharp",
+        "fudge.auto-using",
+        "eservice-online.vs-sharper",
+        "patcx.vscode-nuget-gallery",
+        "mhutchie.git-graph",
+        "trinm1709.dracula-theme-from-intellij",
+        "vscode-icons-team.vscode-icons",
+        "npxms.hide-gitignored"
+    ],
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "docker --version",
+    // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+    "remoteUser": "vscode"
+}

@@ -1,0 +1,30 @@
+
+.FormWrapper{
+    padding: 2%;
+}
+.FormTitle{
+    padding-top: 5%;
+}
+.FormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormText{
+    width: 75%;
+    padding-bottom: 10%;
+    
+}
+
+.FormButton{
+    width: 50%;
+    padding-top: 5%;
+    padding-bottom: 10%;
+}
+
+.SubmittedText{
+    color: #1e62ad;
+    font-weight: bold;
+    font-size: large;
+}

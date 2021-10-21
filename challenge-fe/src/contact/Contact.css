@@ -1,0 +1,19 @@
+.ContactContainer{
+    display: flex;
+}
+
+.ContactCell{
+    width: 50%;
+    align-self: center;
+}
+
+.ContactFormDescription{
+    color: #1e62ad;
+    font-weight: bold;
+    font-size: large;
+}
+
+.ContactForm{
+    width: 537px;
+    height: 214px
+}

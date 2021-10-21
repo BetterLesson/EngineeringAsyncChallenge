@@ -1,0 +1,19 @@
+.RosterContainer{
+    display: flex;
+}
+
+.RosterCell{
+    width: 50%;
+    align-self: center;
+}
+
+.RosterTableDescription{
+    color: #1e62ad;
+    font-weight: bold;
+    font-size: large;
+}
+
+.RosterTable{
+    width: 537px;
+    height: 214px;
+}

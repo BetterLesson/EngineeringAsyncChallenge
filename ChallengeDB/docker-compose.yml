@@ -1,0 +1,15 @@
+version: "3.4"
+
+services:
+#####################
+# BE
+#####################
+  db-challenge:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - migrator_input_path=/app/data/input.json
+      - migrator_output_path=/app/data/output.sql
+    volumes:
+      - "./docker-data:/app/data"
