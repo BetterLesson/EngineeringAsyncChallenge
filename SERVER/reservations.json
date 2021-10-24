@@ -1,0 +1,38 @@
+[
+    {
+        "user": "bobRoss",
+        "event": "MakerSpace Meetup",
+        "startTime": "2022-01-04T15:00:00Z",
+        "endTime": "2022-01-07T00:00:00Z"
+    },
+    {
+        "user": "bobRoss",
+        "event": "MakerSpace Meetup 2",
+        "startTime": "2022-02-04T15:00:00Z",
+        "endTime": "2022-02-07T00:00:00Z"
+    },
+    {
+        "user": "bobRoss",
+        "event": "MakerSpace Meetup 3",
+        "startTime": "2023-02-04T15:00:00Z",
+        "endTime": "2023-02-07T00:00:00Z"
+    },
+    {
+        "user": "aBobbyBob",
+        "event": "Not-Bob-Ross-But-Trying Convention 2022",
+        "startTime": "2021-01-04T15:00:00Z",
+        "endTime": "2022-01-07T00:00:00Z"
+    },
+    {
+        "user": "BobtailCat",
+        "event": "Cats meeting other cats and smelling butts",
+        "startTime": "2022-01-04T15:00:00Z",
+        "endTime": "2022-01-07T00:00:00Z"
+    },
+    {
+        "user": "BobCut",
+        "event": "haircuts anonymous",
+        "startTime": "2022-01-04T15:00:00Z",
+        "endTime": "2022-01-07T00:00:00Z"
+     }
+]
