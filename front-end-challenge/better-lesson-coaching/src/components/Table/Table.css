@@ -1,0 +1,18 @@
+.table-container {
+  width: 100%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.column-headers {
+  display: grid;
+  padding: 20px 10px;
+  font-weight: bold;
+  grid-template-columns: repeat(auto-fill, 1fr);
+}
+
+.table-row {
+  display: grid;
+  padding: 20px 10px;
+  border-top: 2px solid lightgrey;
+}
