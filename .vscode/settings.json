@@ -1,0 +1,35 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Night Rider",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.formatOnSave": true,
+  "eslint.format.enable": true,
+  "eslint.enable": true,
+  "colorize.languages": [
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "pcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg",
+    "javascript",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.associations": {
+    "*.js": "javascript",
+    "*.ts": "typescript",
+    "*.tsx": "typescriptreact"
+  },
+  "htmlhint.options": {
+    "attr-lowercase": false
+  }
+}

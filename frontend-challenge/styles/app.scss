@@ -1,0 +1,9 @@
+::-moz-selection {
+  color: var(--chakra-colors-primary-50);
+  background: var(--chakra-colors-primary-400);
+}
+
+::selection {
+  color: var(--chakra-colors-primary-50);
+  background: var(--chakra-colors-primary-400);
+}
