@@ -25,10 +25,10 @@ Example query:
 
 **Body Parameters**
 
-user - The username to be attached to the reservation [STRING]
-event - The name of your event [STRING]
-startTime - The start date of your reservation [ISO DATE]
-endTime - The end date of your reservation [ISO DATE]
+- user - The username to be attached to the reservation [STRING]
+- event - The name of your event [STRING]
+- startTime - The start date of your reservation [ISO DATE]
+- endTime - The end date of your reservation [ISO DATE]
 
 Example body
 
