@@ -12,8 +12,9 @@ exports.Reservation = class Reservation extends Service {
 
   async find(params) {
     try {
+      // Only grab reservations in the future
       params.query.startTime = {
-        $gte: dayjs().toISOString(),
+        $gt: dayjs().toISOString(),
       };
       return super.find(params);
     } catch (error) {
@@ -31,9 +32,10 @@ exports.Reservation = class Reservation extends Service {
       const startTime = dayjs(data.startTime);
       const endTime = dayjs(data.endTime);
 
+      // Check the validity of the dates passed in
       if (!startTime.isValid()) throw new BadRequest("Invalid start time.");
       if (!endTime.isValid()) throw new BadRequest("Invalid end time.");
-      // Check the validity of the dates passed in
+
       if (dayjs().isAfter(startTime))
         throw new BadRequest(
           "Reservation can not start in the past. Please select a time in the future."
@@ -53,6 +55,22 @@ exports.Reservation = class Reservation extends Service {
           "Reservation end time can not be behind start time."
         );
 
+      // Check for duplicated event names
+      const reservationNameConflicts = await this.app
+        .service("reservation")
+        .find({
+          query: {
+            user: data.user,
+            event: data.event,
+          },
+        });
+      if (reservationNameConflicts.total > 0)
+        throw new BadRequest({
+          message:
+            "An existing reservation with that name already exist. Please select a different reservation name.",
+          errors: reservationNameConflicts.data,
+        });
+
       //Check for overlapping reservations for the current user
       const reservationConflicts = await this.app.service("reservation").find({
         query: {
@@ -60,6 +78,12 @@ exports.Reservation = class Reservation extends Service {
           $or: [
             {
               startTime: {
+                $gte: startTime.toISOString(),
+                $lte: endTime.toISOString(),
+              },
+            },
+            {
+              endTime: {
                 $gte: startTime.toISOString(),
                 $lte: endTime.toISOString(),
               },
@@ -74,6 +98,9 @@ exports.Reservation = class Reservation extends Service {
             "Your reservation is in conflict with other reservations. Please select a different time.",
           errors: reservationConflicts.data,
         });
+
+      data.startTime = startTime.toISOString();
+      data.endTime = endTime.toISOString();
       return super.create(data, params);
     } catch (error) {
       throw new GeneralError(error);
