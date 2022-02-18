@@ -38,3 +38,5 @@ Example body
         "startTime": "2022-06-19T15:00:00Z",
         "endTime": "2022-06-28T15:00:00Z"
     }
+
+The code for the endpoints are located here: **/src/services/reservation/reservation.class.js**
