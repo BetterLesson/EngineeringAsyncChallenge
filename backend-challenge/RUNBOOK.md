@@ -7,7 +7,7 @@
 
 - Make sure you have node and npm installed on your machine
 
-- Open a terminal inside the **backend-challenge** folder and run `npm install`. This will install the all dependencies from **package.json**.
+- Open a terminal inside the **backend-challenge** folder and run `npm install`. This will install all dependencies from **package.json**.
 
 - While inside the **backend-challenge** folder, run `npm run dev`. The project will open at this url: http://localhost:3030/
 
@@ -33,7 +33,7 @@ endTime - The end date of your reservation [ISO DATE]
 Example body
 
     {
-    	"user": "jscoder123",
+    	  "user": "jscoder123",
         "event": "My Cool Event",
         "startTime": "2022-06-19T15:00:00Z",
         "endTime": "2022-06-28T15:00:00Z"

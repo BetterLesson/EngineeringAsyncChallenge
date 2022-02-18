@@ -8,5 +8,5 @@
 ## How to run the project
 
 - Make sure you have node and npm installed on your machine
-- Open a terminal inside the **frontend-challenge** folder and run `npm install`. This will install the all dependencies from **package.json**.
+- Open a terminal inside the **frontend-challenge** folder and run `npm install`. This will install all dependencies from **package.json**.
 - While inside the **frontend-challenge** folder, run `npm run dev`. The project will open at this url: http://localhost:3000/
