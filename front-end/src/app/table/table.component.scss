@@ -1,0 +1,10 @@
+.row {
+  display: flex;
+  align-items: flex-start;
+}
+.row-header{
+  font-weight: bold;
+}
+.column {
+  flex: 1 1 20%;
+}
