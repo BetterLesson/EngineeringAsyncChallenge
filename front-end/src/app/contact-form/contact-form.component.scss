@@ -1,0 +1,16 @@
+.contact-form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.form-header{
+  flex: 1 0 100%;
+}
+.form-description .form-fields {
+  flex: 1 1 50%;
+}
+
+.form-fields *{
+  display: block;
+}

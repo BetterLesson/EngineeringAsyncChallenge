@@ -1,0 +1,8 @@
+<div class="table">
+  <div class="row row-header">
+    <div class="column" *ngFor="let label of headers ">{{label}}</div>
+  </div>
+  <div class="row" *ngFor="let row of data">
+    <div class="column" *ngFor="let item of row | keyvalue">{{item.value}}</div>
+  </div>
+</div>
