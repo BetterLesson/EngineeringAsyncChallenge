@@ -10,20 +10,19 @@ app.get('/reservation', function (req, res) {
 app.post('/reservation', function (req, res) {
     var data = req.body;
     if (data.user && data.event && data.startTime && data.endTime) {
-        if (isValid(data)) {
+        if (isValid(data) && isAvailable(data)) {
             addReservation(data);
+            res.status(201).json("Reservation for ".concat(data.event, " has been saved"));
         }
         else {
-            res.status(200).json('Reservation for ' + data.event + ' is not valid');
+            res.status(200).json("Reservation for ".concat(data.event, " will not work out"));
         }
-        res.status(201).json('Reservation for ' + data.event);
     }
     else {
         res.status(422).json('Malformed data');
     }
 });
 function isValid(data) {
-    var currentReservations = global.database[data.user];
     var start = new Date(data.startTime);
     var today = new Date();
     if (start < today) {
@@ -31,7 +30,23 @@ function isValid(data) {
     }
     return true;
 }
+function isAvailable(data) {
+    var start = new Date(data.startTime);
+    var end = new Date(data.endTime);
+    if (!global.database[data.user]) {
+        return true;
+    }
+    for (var _i = 0, _a = global.database[data.user]; _i < _a.length; _i++) {
+        var reservation = _a[_i];
+        if (!(start > reservation.endTime) && !(end < reservation.startTime)) {
+            return false;
+        }
+    }
+    return true;
+}
 function addReservation(data) {
+    data.startTime = new Date(data.startTime);
+    data.endTime = new Date(data.endTime);
     if (global.database[data.user]) {
         global.database[data.user].push(data);
     }
@@ -39,6 +54,6 @@ function addReservation(data) {
         global.database[data.user] = [data];
     }
 }
-app.listen(3000, function () {
-    console.log('Listening on http://localhost:3000');
+app.listen(3010, function () {
+    console.log('Listening on http://localhost:3010');
 });
