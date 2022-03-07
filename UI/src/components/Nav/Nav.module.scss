@@ -1,0 +1,16 @@
+nav {
+  background-color: var(--color-light);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+
+  a {
+    color: var(--color-dark);
+    margin-left: 1rem;
+    text-decoration: none;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

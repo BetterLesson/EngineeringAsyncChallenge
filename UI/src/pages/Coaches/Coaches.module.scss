@@ -1,0 +1,14 @@
+.hero {
+  position: relative;
+  height: 100vh;
+
+  &::before {
+    background-image: url('../../assets/coaching.png');
+    background-position: center;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+}

@@ -1,0 +1,59 @@
+.hero {
+  color: var(--color-light);
+
+  &::before {
+    background-image: url(../../assets/hero.png);
+    background-position: center;
+    background-size: cover;
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.content {
+  letter-spacing: 0.125rem;
+  margin-left: 10%;
+
+  h1,
+  h2 {
+    font-size: 2rem;
+
+    @media only screen and (min-width: 600px) {
+      font-size: 5rem;
+    }
+  }
+
+  h1 {
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  h3 {
+    font-family: var(--font-family-light);
+    font-size: 2.125rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+
+  img {
+    width: 6.5rem;
+  }
+
+  Button {
+    margin-top: 3rem;
+    text-transform: capitalize;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

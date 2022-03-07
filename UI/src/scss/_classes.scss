@@ -1,0 +1,61 @@
+/* Utility Classes */
+
+.align {
+  &-vertical {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-vertical-center {
+    position: relative;
+
+    @media only screen and (min-width: 600px) {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.display {
+  &-flex {
+    display: flex;
+
+    & > * {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+}
+
+.error {
+  &-text {
+    color: var(--color-error);
+  }
+}
+
+.text {
+  &-align {
+    &-center {
+      text-align: center;
+    }
+
+    &-right {
+      text-align: right;
+    }
+  }
+}
+
+.margin {
+  &-top {
+    &-1 {
+      margin-top: 1rem !important;
+    }
+
+    &-2 {
+      margin-top: 2rem !important;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+- Install node.js
+- `npm i`
+- `node server.js`

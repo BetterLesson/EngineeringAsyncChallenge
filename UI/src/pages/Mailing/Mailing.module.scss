@@ -1,0 +1,38 @@
+.mailingList {
+  background-image: url('../../assets/mailinglist.png');
+  background-position: center;
+  background-size: cover;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+form {
+  background-color: var(--color-light-grey);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding: 2rem;
+  width: 100%;
+
+  @media only screen and (min-width: 600px) {
+    width: 80%;
+  }
+}
+
+.footer {
+  background-color: var(--color-light);
+  bottom: 0;
+  width: 100%;
+
+  @media only screen and (min-width: 600px) {
+    position: absolute;
+  }
+}
+
+.largeText {
+  font-size: 1.75rem;
+}
