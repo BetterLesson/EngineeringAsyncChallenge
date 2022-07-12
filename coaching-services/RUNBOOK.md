@@ -5,11 +5,3 @@
     - npm start
 
 
-## Technology Utilized
-- React
-- PrimeReact Component Library
-- PrimeFlex CSS Styling Library
-
-
-## Notes
-- npx create-react-app was used to scaffold the application for rapid development

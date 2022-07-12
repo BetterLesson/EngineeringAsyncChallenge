@@ -7,7 +7,7 @@ import ContactForm from './components/ContactForm/ContactForm'
 import { Card } from 'primereact/card';
 import { Button } from 'primereact/button';
 import '/node_modules/primereact/resources/themes/vela-blue/theme.css'
-
+const dataFile = require('./datastore.json')
 
 function App() {
 
