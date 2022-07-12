@@ -1,0 +1,120 @@
+{
+    
+        "customers": 
+        [
+            {
+                "UUID": 1,
+                "name": "Jane Doe",
+                "cell": "405.867.5309",
+                "email": "something@gmail.com",
+                "address": "1123 Candle Way",
+                "coaching_service_ids": [1,2,3],
+                "book_set_ids": [1,2],
+                "order_total": 37.99,
+                "order_date": "12-25-22T23:00:05Z",
+                "discount_code": "CHEAP"
+            },
+            {
+                "UUID": 2,
+                "name": "Jane Doe1",
+                "cell": "405.867.5309",
+                "email": "something@gmail.com",
+                "address": "1123 Candle Way",
+                "coaching_service_ids": [1,2],
+                "book_set_ids": [1],
+                "order_total": 37.99,
+                "order_date": "12-25-22T23:00:05Z",
+                "discount_code": "CHEAP"
+            },
+            {
+                "UUID": 3,
+                "name": "Jane Doe",
+                "cell": "405.867.5309",
+                "email": "something@gmail.com",
+                "address": "1123 Candle Way",
+                "coaching_service_ids": [3],
+                "book_set_ids": [2],
+                "order_total": 37.99,
+                "order_date": "12-25-22T23:00:05Z",
+                "discount_code": "CHEAP"
+            },
+            {
+                "UUID": 4,
+                "name": "Jane Doe",
+                "cell": "405.867.5309",
+                "email": "something@gmail.com",
+                "address": "1123 Candle Way",
+                "coaching_service_ids": [1],
+                "book_set_ids": [1,2],
+                "order_total": 37.99,
+                "order_date": "12-25-22T23:00:05Z",
+                "discount_code": "CHEAP"
+            }
+        ],
+        "books": [
+            {
+                "UUID": 1,
+                "title": "How I got here",
+                "author": "Unknown",
+                "sell_price": 40.00,
+                "rental_price": 10.00
+            },
+            {
+                "UUID": 2,
+                "title": "How I got here1",
+                "author": "Unknown",
+                "sell_price": 40.00,
+                "rental_price": 10.00
+            },
+            {
+                "UUID": 3,
+                "title": "How I got here2",
+                "author": "Unknown",
+                "sell_price": 40.00,
+                "rental_price": 10.00
+            }
+        ],
+        "book_sets": [
+            {
+                "UUID": 1,
+                "name": "Jane Doe1",
+                "monthly_price": 15,
+                "yearly_price": 100,
+                "hourly_price": 5.00,
+                "books": [1,2]
+            },
+            {
+                "UUID": 2,
+                "name": "Jane Doe2",
+                "monthly_price": 15,
+                "yearly_price": 100,
+                "hourly_price": 5.00,
+                "books": [1,2,3]
+            }
+        ],
+        "coaching_services": [
+            {
+                "UUID": 1,
+                "name": "Service_XZY",
+                "monthly_price": 15,
+                "yearly_price": 100,
+                "hourly_price": 5.00
+            },
+            {
+                "UUID": 2,
+                "name": "Service_XZY",
+                "monthly_price": 15,
+                "yearly_price": 100,
+                "hourly_price": 5.00
+            },
+            {
+                "UUID": 3,
+                "name": "Service_XZY",
+                "monthly_price": 15,
+                "yearly_price": 100,
+                "hourly_price": 5.00
+            }
+        ]
+    
+}
+
