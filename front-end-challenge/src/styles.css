@@ -1,4 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container{
+    display: flexbox;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px;
+    width: 100%;
+}
+
+.container.right {
+    align-items: right;
+    justify-content: right; 
+}
+
+.container.left {
+    align-items: left;
+    justify-content: left; 
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 100%;
+    padding: 5px;
+}
+
+.row.right {
+    align-items: right;
+    justify-content: right; 
+}
+
+.row.left {
+    align-items: left;
+    justify-content: left; 
+}
+
+.col {
+    width: 100px;
+    flex-grow: inherit;
+}

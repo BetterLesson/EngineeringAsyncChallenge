@@ -1,0 +1,10 @@
+<div class ="row header-row">
+    <div class="col" *ngFor="let field of getFields(items[0])">
+        <span class="header">{{field}}</span>
+    </div>
+</div>
+<div class="row" *ngFor="let item of items">
+    <div class="col" *ngFor="let field of getFields(item)">
+        {{item[field]}}
+    </div>
+</div>
