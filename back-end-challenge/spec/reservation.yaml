@@ -1,0 +1,99 @@
+openapi: "3.0.2"
+info:
+  title: Reservations
+  version: "1.0"
+servers:
+  - url: http://localhost:8080/v1
+paths:
+  /reservation:
+    get:
+      operationId: "getReservation"
+      description: "Get all future events"
+      parameters: []
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Reservations"
+        "400":
+          $ref: "#/components/responses/Invalid"
+        "404":
+          $ref: "#/components/responses/NotFound"
+
+    post:
+      operationId: "postReservation"
+      description: "Add an event to profile"
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Reservation"
+      responses:
+        "200":
+          $ref: "#/components/responses/Success"
+        "400":
+          $ref: "#/components/responses/Invalid"
+        "404":
+          $ref: "#/components/responses/NotFound"
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+    Reservation:
+      type: object
+      required:
+        - user
+        - event
+        - startTime
+        - endTime
+      properties:
+        user:
+          type: string
+        event:
+          type: string
+        startTime:
+          type: string
+        endTime:
+          type: string
+    Reservations:
+      type: array
+      items:
+        $ref: "#/components/schemas/Reservation"
+    Response:  
+      type: object
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+        - code
+        - message
+
+  responses:
+    Success:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Response"
+    NotFound:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Response"
+    Invalid:
+      description: Invalid Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Response"

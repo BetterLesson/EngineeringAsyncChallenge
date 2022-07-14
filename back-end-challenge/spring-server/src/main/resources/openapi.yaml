@@ -1,0 +1,126 @@
+openapi: 3.0.2
+info:
+  title: Reservations
+  version: "1.0"
+servers:
+- url: http://localhost:8080/v1
+paths:
+  /reservation:
+    get:
+      description: Get all future events
+      operationId: getReservation
+      parameters: []
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservations'
+          description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+          description: Invalid Request
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+          description: Not Found
+      x-accepts: application/json
+    post:
+      description: Add an event to profile
+      operationId: postReservation
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+          description: OK
+        "400":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+          description: Invalid Request
+        "404":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Response'
+          description: Not Found
+      x-content-type: application/json
+      x-accepts: application/json
+components:
+  responses:
+    Success:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Response'
+      description: OK
+    NotFound:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Response'
+      description: Not Found
+    Invalid:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Response'
+      description: Invalid Request
+  schemas:
+    Reservation:
+      example:
+        startTime: startTime
+        endTime: endTime
+        event: event
+        user: user
+      properties:
+        user:
+          type: string
+        event:
+          type: string
+        startTime:
+          type: string
+        endTime:
+          type: string
+      required:
+      - endTime
+      - event
+      - startTime
+      - user
+      type: object
+    Reservations:
+      items:
+        $ref: '#/components/schemas/Reservation'
+      type: array
+    Response:
+      example:
+        code: code
+        message: message
+      properties:
+        code:
+          type: string
+        message:
+          type: string
+      required:
+      - code
+      - message
+      type: object
+  securitySchemes:
+    BasicAuth:
+      scheme: basic
+      type: http
