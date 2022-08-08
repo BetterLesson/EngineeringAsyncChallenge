@@ -1,0 +1,29 @@
+# Source Data
+
+|Field Name | Type   | Sample Value |
+| --------- | ------ | ------------ |
+|UUID  | Number | 12345678         |
+|Customer Name | String | Jane Doe    |
+|Cell Phone | String | 405.867.5309 |
+|Email      | String |jane_teacher@gmail.com |
+|Address    | String | 123 School Way, Dallas TX 75001 |
+|Coaching Service ID | List of Number | [37,2002,101] |
+|Book Set ID| List of Number | [22,21] |
+|Order Total | Number | 37.99 |
+|Order Date | String | 12/25/22T23:00:05Z |
+|Discount Code | String | CHEAP |
+
+### OrderInvoices table
+|UUID       | CustomerName  | CellPhone     | Email                 | Address                   | OrderTotal    | OrderDate             | DiscountCode
+| 12345678  | Jane Doe      | 405.867.5309  | jane_teacher@gmail.com  123 School Way, Dallas, TX  37.99         | 12/25/22T23:00:05Z    | Cheap
+
+### CoachingServiceOrders table
+|UUID       | CoachingServiceID
+| 12345678  |  37
+| 12345678  |  2002
+| 12345678  |  101
+
+### BookOrders table
+|UUID       | BookSetID
+| 12345678  |  22
+| 12345678  |  21
