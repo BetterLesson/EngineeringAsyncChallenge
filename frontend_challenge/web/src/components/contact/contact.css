@@ -1,0 +1,10 @@
+.contact_form{
+    height:100%;
+    flex: 1 1 auto;
+    margin:0 auto;
+    display:block;
+}
+
+.contact_form input, select{
+    display:block;
+}
