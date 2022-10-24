@@ -1,0 +1,85 @@
+body{
+    margin: 0;
+}
+
+.top{
+    position:relative;
+    /* text-align:center; */
+}
+
+.hero-img{
+    width:100%;
+    height:100%;
+    filter: sepia(300%) hue-rotate(190deg) saturate(450%);
+    
+}
+
+/* Position logo over hero image */
+.hovered-logo {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    transform: translate(-50%, -50%);
+  }
+
+  .hovered-text {
+    position: absolute;
+    top: 45%;
+    right: -2%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-size:1.5vw;
+    /* background-color:rgba(211, 211, 211, 0.712); */
+    border-radius:10%;
+  }
+
+.heavy{
+    font-weight:800;
+}
+
+
+.left{
+    width:50%;
+    float:left;
+}
+
+.right{
+    width:50%;
+    float:right;
+}
+
+
+.middle-left{
+    width:50%;
+    float:left;
+}
+
+.coach-img{
+    width:100%;
+}
+
+
+.middle-right{
+    margin-top:20vw;
+    width:50%;
+    float:right;
+}
+
+.middle-title{
+    text-align:center;
+    margin-bottom:2vw;
+}
+
+.coach-grid{
+    display:grid;
+    grid-template-columns:25% 25% 25%;
+    justify-items:end;
+}
+.coach-title{
+    font-size:1.3vw;
+    margin-bottom:1.5vw;
+}
+
+.bottom{
+    background-image:url(https://github.com/zwickidtek/EngineeringAsyncChallenge/blob/main/media/mailinglist.png?raw=true)
+}
