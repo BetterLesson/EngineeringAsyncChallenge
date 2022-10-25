@@ -37,32 +37,16 @@ body{
     font-weight:800;
 }
 
-
-.left{
-    width:50%;
-    float:left;
-}
-
-.right{
-    width:50%;
-    float:right;
-}
-
-
-.middle-left{
-    width:50%;
-    float:left;
-}
-
 .coach-img{
     width:100%;
 }
 
-
+.middle{
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
 .middle-right{
     margin-top:20vw;
-    width:50%;
-    float:right;
 }
 
 .middle-title{
@@ -81,5 +65,15 @@ body{
 }
 
 .bottom{
-    background-image:url(https://github.com/zwickidtek/EngineeringAsyncChallenge/blob/main/media/mailinglist.png?raw=true)
+    margin:10vw 0 10vw 0;
+}
+
+.form-container{
+    width:100%;
+    display:grid;
+    grid-template-columns: 50% 50%;
+}
+
+.right{
+    text-align:center;
 }
