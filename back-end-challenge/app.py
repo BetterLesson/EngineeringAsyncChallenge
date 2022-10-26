@@ -2,10 +2,11 @@ from flask import Flask, jsonify
 from flask_restful import Api
 from werkzeug.exceptions import HTTPException
 from werkzeug.exceptions import default_exceptions
+from endpoints.reservations.resource import ReservationResource
 
 app = Flask(__name__)
 
-
+# Handle default errors for http exceptions
 @app.errorhandler(Exception)
 def handle_error(e):
     code = 500
@@ -20,7 +21,6 @@ for ex in default_exceptions:
 api = Api(app)
 api.prefix = '/api'
 
-from endpoints.reservations.resource import ReservationResource
 
 api.add_resource(ReservationResource, '/reservation')
 
