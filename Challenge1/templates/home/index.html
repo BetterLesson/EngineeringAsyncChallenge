@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+
+  {% block html %}
+<title>
+  Home
+</title>
+  {{ super() }}
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-12 ">
+
+                <div class="col-md-6">
+
+
+                        <img class="img-responsive" src="{{url_for('static',filename = 'images/image2.PNG')}}"/>
+
+                </div>
+                <div class="col-md-6">
+                          <div class="col-md-12">
+                                  <h3 id="heading" align="center"> Current Coaches</h3>
+                                  <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th>Coach Name</th>
+                                            <th>Available Starting</th>
+                                            <th>Industry</th>
+
+
+                                          </tr>
+                                        </thead>
+                                      {% for (key,values)  in list_values.items() %}
+                                        <tbody>
+                                          <tr>
+                                            <td>{{ key }}</td>
+                                              <td>{{ values[0] }}</td>
+                                              <td>{{ values[1] }}</td>
+                                          </tr>
+
+                                          </tbody>
+                                         {% endfor %}
+
+
+                                  </table>
+                           </div>
+                </div>
+
+
+            </div>
+          </div>
+        </div>
+       {% include "footer.html" %}
+  {% endblock %}

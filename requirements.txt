@@ -1,0 +1,7 @@
+flask
+wtforms
+flask-wtf
+bootstrap-flask
+wtforms-widgets
+numpy
+marshmallow

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+
+  {% block html %}
+  <title>
+    Contact
+  </title>
+  {{ super() }}
+
+<html>
+
+
+<div class="contact">
+
+  <div class="container">
+
+          <div class="row">
+            <div class="col-md-12 ">
+                <h3>Contact us</h3>
+                <div class="col-md-6 ">
+
+                    {% if message %}
+                          <h1 style="color:black;text-align:center;"> Thanks for the message</h1>
+                    {% endif %}
+                    <form method="POST",action="{{url_for('contact.index')}}">
+                      <dl>
+                        {{ form.csrf_token }}
+
+                        {{ form.name.label }}
+                        {{ form.name }}
+                        {% for error in form.email.errors %}
+                          <li style="color:red;"> {{ error }}</li>
+                        {% endfor %}
+                        {{ form.email.label }}
+                        {{ form.email }}
+                         {{ form.subject.label }}
+                        {{ form.subject }}
+
+                          {{ form.message.label }}
+                          {{ form.message }}
+
+                      </dl>
+                      <p><input type=submit value=Submit>
+                    </form>
+
+                </div>
+            </div>
+          </div>
+  </div>
+
+</div>
+
+<div>
+
+    </div>
+ {% include "footer.html" %}
+  {% endblock %}

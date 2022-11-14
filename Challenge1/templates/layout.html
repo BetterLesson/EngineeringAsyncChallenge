@@ -1,0 +1,46 @@
+<!-- Here we use bootstrap extension for our navigation Bar -->
+{% extends "bootstrap/base.html" %}
+
+{% block html %}
+     <!-- favicon icon -->
+     <link rel="icon" href="{{url_for('static', filename='images/favicon.ico')}}">
+
+    <!------------------  Css style start  ------------>
+    {% block styles %}
+           {{super()}}
+          <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    {% endblock %}
+
+
+   <!------------------  Javascript style start  ------------>
+    {% block scripts %}
+           {{super()}}
+          <link rel="script" href="{{url_for('static', filename='js/default.js')}}">
+    {% endblock %}
+
+
+    {% block main %}
+        <!------------------      Nav bar start  ------------>
+
+        {{nav.top.render()}}
+
+     {% endblock %} <!--------  Nav bar end end  --------->
+
+
+
+
+
+{%- endblock %} <!------ content end  --->
+
+
+
+
+
+
+
+
+
+
+
+
+
