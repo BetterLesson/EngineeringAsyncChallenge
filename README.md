@@ -15,7 +15,7 @@
 
   Submit a [Pull Request](https://help.github.com/en/articles/about-pull-requests) (PR) to this repository. Once your PR is created, our team will review the request. Please monitor your notifications in the event we submit questions or comments on your PR. 
 
-## Front End Challenge
+## Front End Challenge [DONE]
 
 We have an exciting new opportunity to expand our coaching services to additional industries beyond K-12 education. To prepare for this new service offering, we need you to quickly build a new web page for them with the following requirements:
 
@@ -41,7 +41,7 @@ Coaching experts table:
 
 ** Note ** - A possible UI design of this webpage has been provided in the project. You should take any creative liberties you would like with this challenge however.
 
-## Back End Challenge
+## Back End Challenge [DONE]
 
   Create a service with [REST API](https://www.restapitutorial.com) which performs the following functionality: 
   - A POST endpoint at `/reservation` where a user submits a JSON request to add an event reservation to their profile
@@ -66,9 +66,9 @@ Coaching experts table:
   ```   
   
 
-## Database Challenge
+## Database Challenge [PART 1 DONE]
 
-  **Part 1**
+  **Part 1** [DONE]
   
   We have acquired a company that chose to use a NoSQL database in their systems to skip data modeling. In order to ensure orders are processed and invoiced correctly with our systems, we need to move to a relational database. Please review the current data stored in the NoSQL database and submit a new relational data model visualization as a proposed design. 
 
@@ -87,7 +87,7 @@ Startup Order NoSQL Database
 |Order Date | String | 12/25/22T23:00:05Z |
 |Discount Code | String | CHEAP |
 
-**Part 2**
+**Part 2** [OUTSTANDING]
 
   The next step is to create a solution that can migrate the data from their current database to your new relational database. Write a basic program in a language of your choice such as Python or Java. Read in a JSON file that contains the records from the old database, format the data to match your new data model, and print SQL statements to console/standard IO that would insert these records into the new database.
   
