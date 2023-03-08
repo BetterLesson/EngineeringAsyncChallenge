@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Better Lesson</title>
+        <script type="text/javascript"  src="../src/pages/contactus.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/x-icon" href="./images/BL_LogoBasic.png">
+    </head>
+
+    <body>
+        <header >
+            <a href="/">
+                <img class ="img-header" src="https://betterlesson.com/wp-content/uploads/2021/12/BL-Logo-Inline.svg" alt="BetterLesson logo">
+            </a>
+        </header>
+        <br>
+        <div id="coach-table">
+            <div id="coach-table-header">
+                <div class="table-header-cell">
+                    Coach Name
+                </div>
+                <div class="table-header-cell">
+                    Available Starting
+                </div>
+                <div class="table-header-cell">
+                    Industry
+                </div>
+            </div>
+            <div class="coach-table-row">
+                <div class="coach-body-cell">
+                    Jessica D.
+                </div>
+                <div class="coach-body-cell">
+                    11/6/22
+                </div>
+                <div class="coach-body-cell">
+                    Professional Services
+                </div>
+            </div>
+            <div class="coach-table-row">
+                <div class="coach-body-cell">
+                    David F.
+                </div>
+                <div class="coach-body-cell">
+                    8/5/21
+                </div>
+                <div class="coach-body-cell">
+                    Sports/Fitness
+                </div>
+            </div>
+            <div class="coach-table-row">
+                <div class="coach-body-cell">
+                    Keir Y.
+                </div>
+                <div class="coach-body-cell">
+                    4/12/22
+                </div>
+                <div class="coach-body-cell">
+                    E-Sports
+                </div>
+            </div>
+        </div>
+
+        <h2>Contact Us</h2>
+        <div class="container">
+            <form id="form-contact" onsubmit="return false;">
+                <label for="fname">First Name</label>
+                <input required type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input required type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="email">Email</label>
+                <input required type="text" id="email" name="email" placeholder="Your email id..">
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit" onclick="submit_form()">
+            </form>
+        </div>
+
+
+    </body>
+
+</html>
