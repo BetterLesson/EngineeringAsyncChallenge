@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/BL_LogoBasic.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Better Lesson</title>
+</head>
+<body>
+    <section class="section-one">
+        <div class="hero container">
+            <img src="./images/BL_LogoBasic.png" alt="Company Logo" width="100px" height="100px">
+            <h1 class="hero-title">BetterLesson <br /> Professional Coaching</h1>
+            <p class="hero-text">Professional Coach Seminars & Mentorship</p>
+        </div>
+    </section>
+    <section class="section-two">
+        <img class="coaching-img" src="./images/coaching.png" alt="A coach coaching a person">
+        <div class="coaches-container">
+            <h2 class="coaches-title">Current Coaches</h2>
+            <div class="coaches-table">
+                <div class="headers row">
+                    <div class="col">
+                        <h3>Coach Name</h3>
+                    </div>
+                    <div class="col">
+                        <h3>Available Starting</h3>
+                    </div>
+                    <div class="col">
+                        <h3>Industry</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Jessica D.</p>
+                    </div>
+                    <div class="col">
+                        <p>11/6/22</p>
+                    </div>
+                    <div class="col">
+                        <p>Professional Services</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>David F.</p>
+                    </div>
+                    <div class="col">
+                        <p>8/5/21</p>
+                    </div>
+                    <div class="col">
+                        <p>Sports/Fitness</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Keir Y.</p>
+                    </div>
+                    <div class="col">
+                        <p>4/12/22</p>
+                    </div>
+                    <div class="col">
+                        <p>E-Sports</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-three">
+        <div class="mailing-list container">
+            <h3 class="mailing-list-header">Join our mailing list</h3>
+            <div class="form-container">
+                <form id="signupForm" class="signup-form">
+                    <div class="inputs">
+                        <label for="fullName">Full Name</label>
+                        <input id="fullName" type="text" name="fullName" placeholder="Jane Doe" required />
+
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" placeholder="jane_doe@email.com" required />
+
+                        <label for="industry">Industry</label>
+                        <select id="industry" name="industry" required>
+                            <option value="" disabled selected>-- Select Industry --</option>
+                            <option value="E-Sports">E-Sports</option>
+                            <option value="Sports/Fitness">Sports/Fitness</option>
+                            <option value="Professional Services">Professional Services</option>
+                        </select>
+                    </div>
+                    <div class="signup">
+                        <p class="signup-text">Join our mailing to receive notifications about program availability and special discounts</p>
+                        <button class="signup-btn" type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

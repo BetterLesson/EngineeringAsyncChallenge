@@ -1,0 +1,138 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Section One */
+.section-one {
+    background-image: 
+        linear-gradient(rgba(0, 0, 225, 0.4), rgba(0, 0, 255, 0.4)),
+        url("../images/hero.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.hero {
+    padding: 5em 0;
+    color: white;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin: 0.5em 0 0 0;
+}
+
+.hero-text {
+    margin-top: 0.5em;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+/* Section Two */
+.section-two {
+    display: flex;
+}
+
+.coaching-img, .coaches-container {
+    width: 50%;
+}
+
+.coaches-container {
+    padding: 5em 2em;
+    text-align: center;
+}
+
+.coaches-title {
+    font-size: 3rem;
+    color: blue;
+}
+
+.row {
+    display: flex;
+    border-bottom: 2px solid lightgrey;
+}
+
+.col {
+    width: 33%;
+}
+
+.section-three {
+    padding: 5em 0;
+    background-image: 
+        linear-gradient(rgba(0, 0, 225, 0.4), rgba(0, 0, 255, 0.4)),
+        url("../images/mailinglist.png");
+}
+
+.mailing-list-header {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.form-container {
+    width: 100%;
+    padding: 2em 2em;
+    background-color: lightgrey;
+}
+
+.signup-form {
+    display: flex;
+}
+
+label, input {
+    display: block;
+}
+
+input, select {
+    width: 80%;
+    height: 50px;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+}
+
+input {
+    font-style: italic;
+    margin-bottom: 1em;
+}
+
+label {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+select {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.inputs, .signup {
+    width: 50%;
+}
+
+.signup {
+    align-self: flex-end;
+    text-align: center;
+}
+
+.signup-text {
+    margin: 0.25em 0;
+    padding: 0 1rem;
+    font-size: 2.5rem;
+}
+
+.signup-btn {
+    padding: 1rem 4rem;
+    border: none;
+    font-size: 1.5rem;
+    background-color: hsl(240, 100%, 60%);
+    color: white;
+    cursor: pointer;
+}
