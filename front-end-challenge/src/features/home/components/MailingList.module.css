@@ -1,0 +1,16 @@
+.background {
+    z-index: -1;
+    height: 50vh;
+    width: 100vw;
+    background: url("public/mailinglist.png") no-repeat top center;
+    background-size: cover;
+}
+
+.overlay {
+    background: rgba(37, 55, 149, 0.82);
+    width: 100vw;
+    height: 50vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+}

@@ -18,7 +18,7 @@ export const Hero = () => {
                 Professional Coach Seminars & Mentorship
               </h2>
             </div>
-            <button className='bg-blue-700 text-white px-8 py-4 font-semibold text-lg w-fit'>
+            <button className='bg-blue-700 text-white px-8 py-2 font-semibold text-lg w-fit'>
               Register Now
             </button>
           </div>
