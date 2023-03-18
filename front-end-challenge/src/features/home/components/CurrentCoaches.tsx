@@ -24,7 +24,7 @@ const HEADERS = ['Coach Name', 'Available Starting', 'Industry']
 export const CurrentCoaches = () => {
   return (
     <div className='grid grid-cols-2'>
-      <img className='w-full' src={coaching} alt='' />
+      <img className='h-full w-full object-cover' src={coaching} alt='' />
       <div className='bg-gray-100'>
         <div className='w-5/6 mx-auto mt-32'>
           <h3 className='text-blue-600 font-semibold text-5xl pl-10'>Current Coaches</h3>

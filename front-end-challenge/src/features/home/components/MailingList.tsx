@@ -18,7 +18,7 @@ export const MailingList = () => {
           Join our mailing list
         </h3>
         <form
-          className='p-8 pt-4 grid grid-cols-2 bg-zinc-300/75 mx-auto w-3/4 mt-4'
+          className='p-8 pt-4 grid grid-cols-2 bg-zinc-300/75 mx-auto w-3/4 mt-4 mb-16'
           onSubmit={(e) => onSubmit(e)}
         >
           <div className='text-lg'>
