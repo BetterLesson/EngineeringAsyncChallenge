@@ -13,7 +13,7 @@
 }
 ```
 
-5. Get the reservations for a user in by sending a `GET` request to `localhost:8000/reservation` with the JSON body:
+5. Get the reservations for a user by sending a `GET` request to `localhost:8000/reservation` with the JSON body:
 ```
 {
   "user": "myusername"
@@ -23,3 +23,4 @@
 # Notes
 1. I just used an object to hold the data since it's expected that it resets when the server starts/stops, otherwise I would have used something like Postgres
 2. Didn't create a whole file structure for the server, but `index.ts` is just like a controller for reservations
+3. I didn't write tests in the interest of time

@@ -57,6 +57,11 @@ const isReservationOverlapping = (
 app.post("/reservation", (req: Request, res: Response) => {
   const { user, event, startTime, endTime } = req.body;
 
+  if (!user || !event || !startTime || !endTime) {
+    res.send({ error: "Request body is invalid." });
+    return;
+  }
+
   if (isReservationPassed(startTime)) {
     res.send({ error: "Reservation cannot be in the past." });
     return;
@@ -84,11 +89,17 @@ app.post("/reservation", (req: Request, res: Response) => {
 app.get("/reservation", (req: Request, res: Response) => {
   const { user } = req.body;
 
+  if (!user) {
+    res.send({ error: "Request body is missing user." });
+    return;
+  }
+
   if (user in MOCK_DB) {
     res.send({ reservations: MOCK_DB[user] });
   } else {
-    res.send({ message: "You do not have any reservations." });
+    res.send({ message: "This user does not have any reservations." });
   }
+  return;
 });
 
 app.listen(port, () => {
