@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import { DateTime } from "luxon";
 
 type Reservation = {
   event: string;
@@ -18,9 +19,8 @@ app.use(express.json());
 const MOCK_DB: DbType = {};
 
 const isReservationPassed = (startTime: string) => {
-  // TODO: handle time offsets (local time)
-  const startTimeDate = new Date(startTime);
-  const now = new Date();
+  const startTimeDate = DateTime.fromISO(startTime).toUTC();
+  const now = DateTime.now().toUTC();
 
   return startTimeDate < now;
 };
@@ -32,12 +32,12 @@ const isReservationOverlapping = (
 ) => {
   if (reservations.length === 0) return false;
 
-  const newReservationStart = new Date(startTime);
-  const newReservationEnd = new Date(endTime);
+  const newReservationStart = DateTime.fromISO(startTime).toUTC();
+  const newReservationEnd = DateTime.fromISO(endTime).toUTC();
 
   for (let reservation of reservations) {
-    const reservationStart = new Date(reservation.startTime);
-    const reservationEnd = new Date(reservation.endTime);
+    const reservationStart = DateTime.fromISO(reservation.startTime);
+    const reservationEnd = DateTime.fromISO(reservation.endTime);
 
     if (
       (newReservationStart >= reservationStart &&
