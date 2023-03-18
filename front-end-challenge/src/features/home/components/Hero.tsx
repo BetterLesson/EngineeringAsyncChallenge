@@ -6,7 +6,7 @@ export const Hero = () => {
     <>
       <div className={styles.hero}>
         <div className={styles.overlay}>
-          <div className='max-w-5xl mx-auto mt-32 flex flex-col justify-between h-1/2'>
+          <div className='max-w-5xl mx-auto mt-32 flex flex-col justify-between h-3/4'>
             <div>
               <img src={logo} alt='BetterLesson Logo' className='w-24' />
               <h1 className='text-white font-semibold text-6xl'>
