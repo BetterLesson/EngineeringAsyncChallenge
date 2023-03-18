@@ -8,7 +8,7 @@ type Reservation = {
 };
 
 type DbType = {
-  [key: string]: Reservation[] | [];
+  [key: string]: Reservation[];
 };
 
 const app = express();
@@ -75,7 +75,7 @@ app.post("/reservation", (req: Request, res: Response) => {
   }
 
   if (MOCK_DB[user] && MOCK_DB[user].length > 0) {
-    MOCK_DB[user] = [...MOCK_DB[user], { event, startTime, endTime }];
+    MOCK_DB[user].push({ event, startTime, endTime });
   } else {
     MOCK_DB[user] = [{ event, startTime, endTime }];
   }
