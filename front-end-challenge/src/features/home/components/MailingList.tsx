@@ -2,11 +2,26 @@ import styles from './MailingList.module.css'
 import { SyntheticEvent, useState } from 'react'
 export const MailingList = () => {
   const [name, setName] = useState('')
+  const [nameError, setNameError] = useState(false)
   const [email, setEmail] = useState('')
+  const [emailError, setEmailError] = useState(false)
   const [industry, setIndustry] = useState('E-Sports')
 
   const onSubmit = (e: SyntheticEvent) => {
+    setNameError(false)
+    setEmailError(false)
+
     e.preventDefault()
+    if (name.length === 0) {
+      setNameError(true)
+    }
+
+    if (email.length === 0) {
+      setEmailError(true)
+    }
+
+    if (nameError || emailError) return
+
     const result = { name, email, industry }
     console.log(result)
   }
@@ -26,7 +41,7 @@ export const MailingList = () => {
               <label className=''>Full Name</label>
               <input
                 type='text'
-                className='px-4 py-2'
+                className={`px-4 py-2 ${nameError ? 'border-2 border-rose-600' : ''}`}
                 placeholder='Jane Doe'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -36,7 +51,7 @@ export const MailingList = () => {
               <label className=''>Email</label>
               <input
                 type='text'
-                className='px-4 py-2'
+                className={`px-4 py-2 ${emailError ? 'border-2 border-rose-600' : ''}`}
                 placeholder='jane_doe@email.com'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
