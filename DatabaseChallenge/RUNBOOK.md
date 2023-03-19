@@ -9,4 +9,5 @@ To run JAR:\
 To run from source:\
 -Open DatabaseChallengePart2 in Intellij\
 -Update path to "StartupOrderNoSQLDatabase.json" (easiest would be absolute path)\
+  -Relative path: "EngineeringAsyncChallenge/DatabaseChallenge/DatabaseChallengePart2/build/resources/main/"\
 -Run
