@@ -1,0 +1,129 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Better Lesson</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./public/media/BL_LogoBasic.png">
+  </head>
+
+  <body>
+    <script src="./script.js"></script>
+    
+    <div class="hero-section">
+      <img
+        src="./public/media/BL_LogoBasic.png"
+        alt=""
+        class="hero-image-logo"
+      />
+      <div class="hero-text">
+        <h1>BetterLesson</h1>
+        <h1>Professional Coaching</h1>
+        <p>PROFESIONAL COACH SEMINARS & MENTORSHIP</p>
+      </div>
+      <button>Register Now</button>
+    </div>
+
+    <div class="coaches-section">
+      <div class="coaches-images"></div>
+      <div class="coaches-view">
+        <h1 style="font-size: 50px; text-align: center; color:blue">Current Coaches</h2>
+
+        <div class="table">
+          <div class="column">
+            <div class="row">
+              <b>Coach name</b>
+            </div>
+
+            <div class="row">
+              <a>Jessica D.</a>
+            </div>
+            <div class="row">
+              <a>David F.</a>
+            </div>
+            <div class="row">
+              <a>Keir Y.</a>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="row">
+              <b>Available Starting</b>
+            </div>
+            <div class="row">
+              <a>11/6/22</a>
+            </div>
+            <div class="row">
+              <a>8/5/21</a>
+            </div>
+            <div class="row">
+              <a>4/12/22</a>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="row">
+              <b>Industry</b>
+            </div>
+            <div class="row">
+              <a>Professional Services</a>
+            </div>
+            <div class="row">
+              <a>Sports/Fitness</a>
+            </div>
+            <div class="row">
+              <a>E-Sports</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mailing-section">
+      <h2 style="font-size: 40px; color: white; text-align: center;">
+        Join our mailing list
+      </h2>
+      <div class="contact-form-container">
+        <form class="contact-form-inside-view" id="contact-form" name="contact-form" onsubmit="myFunction()" >
+            <div>
+          <label for="fName">Full Name</label>
+          <input type="text" id="fName" name="fName" required placeholder="Jane Doe">
+      
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="jane_doe@email.com">
+      
+          <label for="industry">Industry</label>
+          <select id="industry" name="industry">
+            <option value="E-Sports">E-Sports</option>
+            <option value="Sports/Fitness">Sports/Fitness</option>
+            <option value="Professional Services">Professional Services</option>
+          </select>
+            </div>
+          <div class="right-contact-form-column">
+          <p style="font-size: 28px; font-weight: 500; text-align: center;">
+            Join our mailing to receive notifications about program availability and special discounts
+          </p>
+          <input id="signUp" type="submit" value="Sign Up" style="background-color: blue;">
+        </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="footer-contact-paragraph">
+      <b> EMAIL ADDRESS </b>
+      <p>hello@reallygreatsite.com</p>
+    </div>
+    <div class="footer-contact-paragraph">
+      <b> MAILING ADDRESS </b>
+      <p>
+        123 Anywhere St. Any City, ST 12345
+      </p>
+    </div>
+    <div class="footer-contact-paragraph">
+      <b> PHONE NUMBER </b>
+      <p>(123) 456-7890</p>
+    </div>
+  </footer>
+</html>
