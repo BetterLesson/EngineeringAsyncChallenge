@@ -8,6 +8,6 @@ Part2:\
 -Create Java program to migrate records from old database to new database\
 -Read in JSON\
 -Format to new data model\
--Print sql statements to insert those records into new database\
+-Print sql statements to insert those records into new database
 
 ![Screenshot](ExpectedResults.PNG)
