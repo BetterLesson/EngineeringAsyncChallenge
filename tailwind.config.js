@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-image': "url('/src/assets/images/hero.png')",
-        'table-image': "url('/src/assets/images/coaching.png')",
+        hero: "url('/src/assets/images/hero.png')",
+        'mailing-list': "url('/src/assets/images/mailinglist.png')",
       },
     },
   },
