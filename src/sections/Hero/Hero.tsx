@@ -1,11 +1,10 @@
 import blIcon from '../../assets/images/BL_LogoBasic.png';
-import './Hero.css';
 
 const Hero = () => {
   return (
     <section id="hero">
       <div className="relative h-64">
-        <div className="absolute inset-0 bg-cover bg-center bg-hero-image"></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-hero-image" />
         <div className="absolute inset-0 bg-blue-800 bg-opacity-50">
           <div className="py-10 px-6">
             <img
