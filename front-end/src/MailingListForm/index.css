@@ -1,0 +1,11 @@
+.mailingList {
+     /* this is an arbitrary value to separate out the pages */
+    margin-top: 50px;
+    max-width: 30%;
+}
+
+.mailingListInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}

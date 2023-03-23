@@ -1,9 +1,31 @@
 .current-coaches-table {
-    display: grid;
-    grid-auto-flow: row;
-    grid-template-columns: 1fr 20% 1fr;
+    max-width: 50%;
 }
 
-.current-coach-row {
 
+.current-coach-row {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 20% 20% 60%;
+    row-gap: 10px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.current-coach-row:last-child {
+    border-bottom: none;
+}
+
+.current-coach-row.header {
+    font-weight: bold;
+}
+
+.current-coach-row div {
+    display: inline;
+}
+
+.current-coach-row span {
+    margin-right: 10px;
 }

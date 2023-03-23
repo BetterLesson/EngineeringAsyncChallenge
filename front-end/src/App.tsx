@@ -10,7 +10,6 @@ export const App = () => {
     <h1>BetterLesson Professional Coaching</h1>
     <p>Professional Coach Seminars & Mentorship</p>
     <CurrentCoachesTable  />
-
     <MailingListForm />
     </div>
   )

@@ -8,6 +8,14 @@ type Coach = {
 }
 
 
+const formatDate = (startingDate: Date): string => {
+    const year = startingDate.getFullYear().toString();
+    const date = startingDate.getDate();
+    const month = startingDate.getMonth() + 1;
+
+    return `${month}/${date}/${year.substring(2) }`
+}
+
 export const CurrentCoachesTable = () => {
     const currentCoaches: Coach[] = [
        {
@@ -31,21 +39,25 @@ export const CurrentCoachesTable = () => {
     const coachComponents = currentCoaches.map(({ name, availableStarting, industry }: Coach) => {
         return (
             <div className="current-coach-row">
-                <span>{ name }</span>
-                <span>{availableStarting.toDateString() }</span>
-                <span>{ industry }</span>
+                <div>{ name }</div>
+                <div>{formatDate(availableStarting) }</div>
+                <div>{ industry }</div>
             </div>
         )
     })
 
     return (
-        <div className="current-coaches-table">
-            <div className="">
-                <span>Coach Name</span>
-                <span>Available Starting</span>
-                <span>Industry</span>
+        <>
+            <h1>Current Coaches</h1>
+            <div className="current-coaches-table">
+                <div className="current-coach-row header">
+                    <div>Coach Name</div>
+                    <div>Available Starting</div>
+                    <div>Industry</div>
+                </div>
+                { coachComponents }
             </div>
-            { coachComponents }
-        </div>
+        </>
     )
+
 }
