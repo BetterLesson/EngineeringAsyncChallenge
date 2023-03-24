@@ -2,6 +2,9 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    screens: {
+      tablet: '600px',
+    },
     extend: {
       backgroundImage: {
         hero: "url('/src/assets/images/hero.png')",

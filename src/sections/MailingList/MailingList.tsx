@@ -1,13 +1,10 @@
-import React from 'react';
-import mailingListImg from '../../assets/images/mailinglist.png';
-
 const MailingList = () => {
   return (
     <section
       id="mailing-list"
       className="mt-10"
     >
-      <div className="relative flex justify-center  h-auto bg-mailing-list bg-cover bg-center">
+      <div className="relative flex justify-center h-auto bg-mailing-list bg-cover bg-center">
         <div className="absolute top-0 left-0 w-full h-full bg-blue-800 opacity-50 z-0"></div>
         <div className="py-5 z-10">
           <h3 className="font-bold text-xl text-white text-center mb-4">
