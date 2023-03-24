@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <section id="footer">
       <div className="py-10">
-        <div className="flex flex-col text-xs text-center gap-4">
+        <div className="flex flex-col tablet:flex-row tablet:justify-center text-xs text-center gap-4 tablet:gap-10">
           <div className="">
             <p className="uppercase font-semibold tracking-wider">
               Email Address

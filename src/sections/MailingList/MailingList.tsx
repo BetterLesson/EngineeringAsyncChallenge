@@ -2,7 +2,7 @@ const MailingList = () => {
   return (
     <section
       id="mailing-list"
-      className="mt-10"
+      className="mt-10 tablet:mt-20"
     >
       <div className="relative flex justify-center h-auto bg-mailing-list bg-cover bg-center">
         <div className="absolute top-0 left-0 w-full h-full bg-blue-800 opacity-50 z-0"></div>

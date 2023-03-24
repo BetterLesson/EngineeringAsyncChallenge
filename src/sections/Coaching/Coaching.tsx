@@ -6,20 +6,20 @@ const Coaching = () => {
   return (
     <section
       id="coaching"
-      className="mt-10"
+      className="mt-10 tablet:mt-20"
     >
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col tablet:flex-row gap-2 tablet:gap-0 items-center">
         <div className="">
           <img
-            className="w-4/5 rounded-lg mx-auto
+            className="w-4/5 tablet:w-full rounded-lg tablet:rounded-none mx-auto
             "
             src={tableImg}
             alt="Student having video call with coach"
           />
         </div>
         {/* Table */}
-        <div>
-          <div className="mx-5">
+        <div className="mx-5 tablet:basis-11/12 tablet:mx-0">
+          <div>
             <h1 className="text-xl text-center text-blue-800 font-semibold mb-4">
               Current Coaches
             </h1>
