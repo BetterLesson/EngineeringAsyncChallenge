@@ -18,9 +18,9 @@ const Coaching = () => {
           />
         </div>
         {/* Table */}
-        <div className="mx-5 tablet:basis-11/12 tablet:mx-0">
+        <div className="mx-5 tablet:basis-11/12 tablet:mx-0 min-[860px]:basis-9/12">
           <div>
-            <h1 className="text-xl text-center text-blue-800 font-semibold mb-4">
+            <h1 className="text-xl text-center text-blue-800 font-semibold mb-4 tablet:text-2xl">
               Current Coaches
             </h1>
           </div>

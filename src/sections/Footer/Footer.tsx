@@ -3,8 +3,8 @@ import React from 'react';
 const Footer = () => {
   return (
     <section id="footer">
-      <div className="py-10">
-        <div className="flex flex-col tablet:flex-row tablet:justify-center text-xs text-center gap-4 tablet:gap-10">
+      <div className="bg-white  bottom-0 w-full">
+        <div className="flex flex-col tablet:flex-row tablet:justify-center text-xs text-center gap-4 tablet:gap-10 py-10 tablet:py-20">
           <div className="">
             <p className="uppercase font-semibold tracking-wider">
               Email Address

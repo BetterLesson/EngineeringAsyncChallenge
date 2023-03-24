@@ -3,7 +3,7 @@ import blIcon from '../../assets/images/BL_LogoBasic.png';
 const Hero = () => {
   return (
     <section id="hero">
-      <div className="relative h-72 min-[530px]:h-96 flex items-center bg-hero bg-cover bg-center ">
+      <div className="relative h-72 min-[530px]:h-96 flex items-center bg-hero bg-cover bg-center">
         <div className="absolute left-5 tablet:left-10 z-10 flex-1 ">
           <img
             src={blIcon}
