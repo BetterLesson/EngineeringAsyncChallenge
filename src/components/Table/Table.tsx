@@ -4,10 +4,10 @@ interface Props {
 }
 const Table = ({ headers, data }: Props) => {
   return (
-    <div className="mx-5 text-center text-sm tablet:text-base laptop:text-lg">
+    <div className="mx-5 text-sm text-center tablet:text-base laptop:text-lg">
       <div className="flex flex-col">
         {/* Headers */}
-        <div className="headers flex font-bold items-center gap-1">
+        <div className="flex items-center gap-1 font-bold headers">
           {headers.map((header) => (
             <div
               key={header}

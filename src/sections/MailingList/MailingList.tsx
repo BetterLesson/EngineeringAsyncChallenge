@@ -4,14 +4,14 @@ const MailingList = () => {
       id="mailing-list"
       className="mt-10 tablet:mt-20"
     >
-      <div className="relative flex justify-center h-auto bg-mailing-list bg-cover bg-center">
-        <div className="absolute top-0 left-0 w-full h-full bg-blue-800 opacity-50 z-0"></div>
-        <div className="py-5 z-10">
-          <h3 className="font-bold text-xl tablet:text-2xl text-white text-center mb-4">
+      <div className="relative flex justify-center h-auto bg-center bg-cover bg-mailing-list">
+        <div className="absolute top-0 left-0 z-0 w-full h-full bg-blue-800 opacity-50"></div>
+        <div className="z-10 py-5">
+          <h3 className="mb-4 text-xl font-bold text-center text-white tablet:text-2xl">
             Join our mailing list
           </h3>
           {/* Form */}
-          <div className="flex flex-col tablet:flex-row tablet:items-center  bg-slate-200 w-4/5 mx-auto rounded-lg text-sm p-4 gap-4">
+          <div className="flex flex-col w-4/5 gap-4 p-4 mx-auto text-sm rounded-lg tablet:flex-row tablet:items-center bg-slate-200">
             {/* Form */}
             <form className="tablet:flex-1">
               <div className="mb-2">
@@ -53,7 +53,7 @@ const MailingList = () => {
                 availability and special discounts
               </p>
               <div className="flex justify-center">
-                <button className="bg-blue-800 px-4 py-2 tablet:px-6 text-white">
+                <button className="px-4 py-2 text-white bg-blue-800 tablet:px-6">
                   Sign Up
                 </button>
               </div>

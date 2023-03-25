@@ -6,7 +6,7 @@ import MailingList from './sections/MailingList/MailingList';
 
 function App() {
   return (
-    <div className="bg-slate-200 relative min-h-screen">
+    <div className="relative min-h-screen bg-slate-200">
       <main className="max-w-[1100px] mx-auto bg-white mb-auto">
         <Hero />
         <Coaching />
