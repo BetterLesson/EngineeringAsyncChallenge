@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <section id="footer">
       <div className="bg-white  bottom-0 w-full">
-        <div className="flex flex-col tablet:flex-row tablet:justify-center text-xs text-center gap-4 tablet:gap-10 py-10 tablet:py-20">
-          <div className="">
+        <div className="flex flex-col tablet:flex-row tablet:justify-center text-xs text-center gap-4 tablet:gap-10 py-10 tablet:py-20 laptop:text-base">
+          <div>
             <p className="uppercase font-semibold tracking-wider">
               Email Address
             </p>

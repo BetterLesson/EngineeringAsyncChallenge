@@ -9,7 +9,7 @@ const Coaching = () => {
       className="mt-10 tablet:mt-20"
     >
       <div className="flex flex-col tablet:flex-row gap-2 tablet:gap-0 items-center">
-        <div className="">
+        <div className="laptop:flex-1">
           <img
             className="w-4/5 tablet:w-full rounded-lg tablet:rounded-none mx-auto
             "
@@ -18,7 +18,7 @@ const Coaching = () => {
           />
         </div>
         {/* Table */}
-        <div className="mx-5 tablet:basis-11/12 tablet:mx-0 min-[860px]:basis-9/12">
+        <div className="mx-5 tablet:basis-11/12 tablet:mx-0  laptop:flex-1">
           <div>
             <h1 className="text-xl text-center text-blue-800 font-semibold mb-4 tablet:text-2xl">
               Current Coaches
