@@ -4,24 +4,23 @@ import mailingListImg from '../../assets/mailinglist.png';
 import './join.css';
 
 function Join() {
-	const industries = ['E-Sports', 'Professional Services', 'Sports / Fitness'];
+  const industries = ['E-Sports', 'Professional Services', 'Sports / Fitness'];
 
 	const defaultInfo = {
-		name: '',
-		email: '',
-		industry: industries[0]
-	}
-	
-	const defaultError = {
-		name: false,
-		email: false,
-		industry: false
+    name: '',
+    email: '',
+    industry: industries[0]
 	}
 
-	
-	const [info, setInfo] = useState(defaultInfo);
-	const [error, setError] = useState(defaultError);
-	const errorOrDefault = useMemo(() => {
+	const defaultError = {
+    name: false,
+    email: false,
+    industry: false
+	}
+
+  const [info, setInfo] = useState(defaultInfo);
+  const [error, setError] = useState(defaultError);
+  const errorOrDefault = useMemo(() => {
     return (
       Object.values(error).filter(item => item === true).length > 0 
       || Object.values(info).filter(item => item === '').length > 0
@@ -29,8 +28,8 @@ function Join() {
     )
   }, [error])
 
-	const handleChange = e => {
-		if (!e.target.value) {
+  const handleChange = e => {
+    if (!e.target.value) {
       setError(prevErrors => ({...prevErrors, [e.target.name]: true}))
     } else {
       setError(prevErrors => ({...prevErrors, [e.target.name]: false}))
@@ -48,24 +47,24 @@ function Join() {
         }
       )
     })
-	}
+  }
 
-	const handleSubmit = e => {
-		if (errorOrDefault) return
+  const handleSubmit = e => {
+    if (errorOrDefault) return
     console.log("info", info)
-	}
+  }
 
-	const industryOptionsMapped = industries.map((option, index) => {
+  const industryOptionsMapped = industries.map((option, index) => {
     return (<MenuItem key={index} value={option}>{option}</MenuItem>)
   })
 
   return (
     <div className='join-section section'>
-			<img className='background-img mailing-img' src={mailingListImg} />
-			<div className='form-area-container'>
-				<Typography variant='h4' color='white'>Join our mailing list</Typography>
-				<div className='inner-signup-section'>
-					<Paper sx={{bgcolor: 'rgb(210, 210, 210, 0.8)', display: 'flex'}} >
+      <img className='background-img mailing-img' src={mailingListImg} />
+      <div className='form-area-container'>
+        <Typography variant='h4' color='white'>Join our mailing list</Typography>
+        <div className='inner-signup-section'>
+          <Paper sx={{bgcolor: 'rgb(210, 210, 210, 0.8)', display: 'flex'}} >
           <div className='form-inputs'>
             <TextField 
               component={Paper}
@@ -114,15 +113,15 @@ function Join() {
               variant='contained' 
               onClick={handleSubmit}
               disabled={errorOrDefault}
-							sx={{mx: 6}}
+              sx={{mx: 6}}
             >
               Sign Up
             </Button>
           </div>
         </Paper>
-					</div>
+      </div>
 
-			</div>
+      </div>
     </div>
   )
 }
