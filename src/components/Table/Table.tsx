@@ -20,12 +20,9 @@ const Table = ({ headers, data }: Props) => {
         {/* Data */}
         <div>
           {data.map((row) => (
-            <div>
+            <div key={row.name}>
               <hr className="my-1" />
-              <div
-                key={row.name}
-                className="flex items-center gap-1"
-              >
+              <div className="flex items-center gap-1">
                 {Object.values(row).map((value) => (
                   <div
                     key={value}
