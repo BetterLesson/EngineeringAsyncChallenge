@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+.section {
+  height: 500px;
+}
+
+.background-img {
+  object-fit: cover;
+  /* background-color: blue; */
+  position: absolute;
+  filter: opacity(0.5) drop-shadow(0 0 0 blue);
+  z-index: -1;
+}

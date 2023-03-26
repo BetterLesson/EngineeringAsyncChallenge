@@ -1,0 +1,14 @@
+.hero-section {
+    /* background-image: url('../../assets/hero.png'); */
+    /* background-size: cover; */
+    filter: opacity(0.90) drop-shadow(0 0 0 blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.hero-img {
+    height: 100%;
+    width: 100%;
+}

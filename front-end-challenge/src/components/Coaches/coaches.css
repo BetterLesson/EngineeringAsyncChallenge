@@ -1,0 +1,17 @@
+.coaches-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.current-coaches-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.coaching-img {
+    height: 100%;
+    object-fit: cover;
+}

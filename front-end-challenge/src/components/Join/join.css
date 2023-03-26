@@ -1,0 +1,34 @@
+.join-section {
+    filter: opacity(0.90) drop-shadow(0 0 0 blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mailing-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.form-area-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-signup-section {
+    width: 70%;
+}
+
+.form-inputs, .form-info-submit{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form-info-submit {
+    margin: 30px;
+}
