@@ -5,18 +5,16 @@ import './join.css';
 
 function Join() {
   const industries = ['E-Sports', 'Professional Services', 'Sports / Fitness'];
-
-	const defaultInfo = {
+  const defaultInfo = {
     name: '',
     email: '',
     industry: industries[0]
-	}
-
-	const defaultError = {
+  };
+  const defaultError = {
     name: false,
     email: false,
     industry: false
-	}
+  };
 
   const [info, setInfo] = useState(defaultInfo);
   const [error, setError] = useState(defaultError);
