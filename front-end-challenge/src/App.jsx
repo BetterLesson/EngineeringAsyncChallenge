@@ -1,6 +1,7 @@
 import Coaches from './components/Coaches/Coaches';
 import Hero from './components/Hero/Hero';
 import Join from './components/Join/Join';
+import Info from './components/Info/Info';
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Hero />
       <Coaches />
       <Join />
+      <Info />
     </div>
   )
 }
