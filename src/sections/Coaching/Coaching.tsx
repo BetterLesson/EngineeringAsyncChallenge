@@ -26,6 +26,7 @@ const Coaching = () => {
 
           <Table
             headers={['Coach Name', 'Available Starting', 'Industry']}
+            classes="mx-5 text-sm text-center tablet:text-base laptop:text-lg"
             data={[
               {
                 name: 'Jessica D.',

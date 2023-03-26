@@ -1,10 +1,11 @@
 interface Props {
   headers: string[];
   data: { [key: string]: string }[];
+  classes?: string;
 }
-const Table = ({ headers, data }: Props) => {
+const Table = ({ headers, data, classes }: Props) => {
   return (
-    <div className="mx-5 text-sm text-center tablet:text-base laptop:text-lg">
+    <div className={classes}>
       <div className="flex flex-col">
         {/* Headers */}
         <div className="flex items-center gap-1 font-bold headers">
