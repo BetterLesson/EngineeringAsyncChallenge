@@ -11,7 +11,8 @@ const {
   isInFuture,
   doesNotConflictWithExistingReservations,
   getFutureReservations,
-  isValidFormat,
+  hasRequiredKeys,
+  haveValidDates,
 } = require('./utils.js');
 
 app.use(bodyParser.json());
@@ -35,12 +36,17 @@ app.post('/reservation', (req, res) => {
   const submittedData = req.body;
 
   // Check if reservation has valid format. Must have name, startTime, and endTime properties
-  if (!isValidFormat(submittedData)) {
+  if (!hasRequiredKeys(submittedData)) {
     return res
       .status(400)
       .send(
         'Invalid reservation format. Must have name, startTime, and endTime properties.'
       );
+  }
+
+  // Check if reservation has valid dates
+  if (!haveValidDates(submittedData)) {
+    return res.status(400).send('Submitted reservation has invalid dates');
   }
 
   // Check if reservation is in the future
@@ -55,7 +61,7 @@ app.post('/reservation', (req, res) => {
       .send('Reservation conflicts with existing reservation');
   }
 
-  // Create new reservation object with only the properties needed
+  // Create new reservation object with only the required properties
   const newReservation = {
     name: submittedData.name,
     startTime: submittedData.startTime,

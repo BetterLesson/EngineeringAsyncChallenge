@@ -26,14 +26,19 @@ const doesNotConflictWithExistingReservations = (
     return start < existingEnd && end > existingStart;
   });
 };
-const isValidFormat = (reservation) =>
+const hasRequiredKeys = (reservation) =>
   reservation.hasOwnProperty('name') &&
   reservation.hasOwnProperty('startTime') &&
   reservation.hasOwnProperty('endTime');
+
+const haveValidDates = ({ startTime, endTime }) => {
+  return !isNaN(Date.parse(startTime)) && !isNaN(Date.parse(endTime));
+};
 
 module.exports = {
   getFutureReservations,
   isInFuture,
   doesNotConflictWithExistingReservations,
-  isValidFormat,
+  hasRequiredKeys,
+  haveValidDates,
 };
