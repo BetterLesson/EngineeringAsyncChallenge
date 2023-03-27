@@ -52,20 +52,28 @@ function getFutureReservations() {
 const isInFuture = (reservation) => {
   const now = new Date();
   const { startTime } = reservation;
-  console.log('startTime: ', startTime);
 
-  return startTime > now;
+  return new Date(startTime) > now;
+};
 
-  // Must be in the future
+const doesNotConflictWithExistingReservations = (reservation) => {
+  const { startTime, endTime } = reservation;
+  const start = new Date(startTime);
+  const end = new Date(endTime);
+
+  return !reservations.some((existingReservation) => {
+    const existingStart = new Date(existingReservation.startTime);
+    const existingEnd = new Date(existingReservation.endTime);
+
+    return start < existingEnd && end > existingStart;
+  });
 };
 
 const test = {
   name: 'Bowling Event',
-  startTime: "new Date('2023-08-15T09:00:00Z)",
-  endTime: " new Date('2023-08-17T18:00:00Z')", // 8/17/2023, 6:00:00 PM
+  startTime: '2023-08-15T09:00:00Z', // 8/15/2023, 9:00:00 AM
+  endTime: '2023-08-17T18:00:00Z', // 8/17/2023, 6:00:00 PM
 };
-
-console.log(isInFuture(test));
 
 // Endpoints
 app.get('/', (req, res) => {
@@ -75,17 +83,26 @@ app.get('/', (req, res) => {
 // Post reservation
 app.post('/reservation', (req, res) => {
   const reservation = req.body;
-  console.log('reservation received: ', reservation);
-  // Validate reservation
-  // Must NOT overlap with existing reservations
-  // Must be in the future
 
-  // Add reservation to the list
+  // Check if reservation is in the future
+  if (!isInFuture(reservation)) {
+    return res.status(400).send('Reservation must be in the future');
+  }
+
+  // Check if reservation conflicts with existing reservations
+  if (!doesNotConflictWithExistingReservations(reservation)) {
+    return res
+      .status(400)
+      .send('Reservation conflicts with existing reservation');
+  }
+
   reservations.push(reservation);
+  res.send('Reservation successfully added');
 });
 
 // GET all future reservations
 app.get('/reservation', (req, res) => {
+  // Get future reservations
   const futureReservations = getFutureReservations();
   res.send(futureReservations);
 });
