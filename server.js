@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 // Data and Business Logic imports
 const reservations = require('./data.js');
@@ -21,12 +21,15 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-// Endpoints
-app.get('/', (req, res) => {
-  res.send('Hello World!');
+// GET all future reservations
+app.get('/reservation', (req, res) => {
+  // Get future reservations
+  const futureReservations = getFutureReservations(reservations);
+
+  res.status(200).send(futureReservations);
 });
 
-// Post reservation
+// POST reservation
 app.post('/reservation', (req, res) => {
   const reservation = req.body;
 
@@ -44,14 +47,6 @@ app.post('/reservation', (req, res) => {
 
   reservations.push(reservation);
   res.status(201).send('Reservation successfully added');
-});
-
-// GET all future reservations
-app.get('/reservation', (req, res) => {
-  // Get future reservations
-  const futureReservations = getFutureReservations(reservations);
-
-  res.status(200).send(futureReservations);
 });
 
 // Error handling
