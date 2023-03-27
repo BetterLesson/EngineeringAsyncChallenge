@@ -43,14 +43,15 @@ app.post('/reservation', (req, res) => {
   }
 
   reservations.push(reservation);
-  res.send('Reservation successfully added');
+  res.status(201).send('Reservation successfully added');
 });
 
 // GET all future reservations
 app.get('/reservation', (req, res) => {
   // Get future reservations
   const futureReservations = getFutureReservations(reservations);
-  res.send(futureReservations);
+
+  res.status(200).send(futureReservations);
 });
 
 // Error handling
