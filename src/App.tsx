@@ -4,7 +4,7 @@ import Footer from './sections/Footer/Footer';
 import Hero from './sections/Hero/Hero';
 import MailingList from './sections/MailingList/MailingList';
 
-function App() {
+const App = () => {
   return (
     <div className="relative min-h-screen bg-slate-200">
       <main className="max-w-[1100px] mx-auto bg-white mb-auto">
@@ -15,5 +15,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
+
 export default App;
