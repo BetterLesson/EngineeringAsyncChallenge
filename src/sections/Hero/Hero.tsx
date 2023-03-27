@@ -11,7 +11,7 @@ const Hero = () => {
             alt="BetterLesson Logo"
           />
           <div className="mb-8 font-bold tracking-wider text-white">
-            <div className="text-xl tablet:text-3xl laptop:text-5xl">
+            <div className="text-xl tracking-wide tablet:text-3xl laptop:text-5xl">
               <h1>BetterLesson</h1>
               <h1>Professional Coaching</h1>
             </div>

@@ -59,7 +59,7 @@ const MailingList = () => {
       <div className="relative flex justify-center h-auto bg-center bg-cover bg-mailing-list">
         <div className="absolute top-0 left-0 z-0 w-full h-full bg-blue-800 opacity-50"></div>
         <div className="z-10 py-5 laptop:py-10">
-          <h3 className="mb-4 text-xl font-bold text-center text-white tablet:text-2xl">
+          <h3 className="mb-4 text-xl font-semibold text-center text-white tablet:text-2xl">
             Join our mailing list
           </h3>
           <form
