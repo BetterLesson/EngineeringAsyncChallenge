@@ -12,34 +12,42 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
+// Data
 const reservations = [
   {
-    name: 'Birthday party',
-    startTime: new Date('2023-03-25T15:00:00Z'),
-    endTime: new Date('2023-03-25T16:00:00Z'),
+    name: 'Team meeting',
+    startTime: new Date('2022-12-25T15:00:00Z'),
+    endTime: new Date('2022-12-25T16:00:00Z'), // 12/25/2022, 4:00:00 PM
   },
   {
-    name: 'Concert',
-    startTime: new Date('2023-03-25T17:30:00Z'),
-    endTime: new Date('2023-03-25T18:30:00Z'),
+    name: 'Holiday party',
+    startTime: new Date('2022-12-31T20:00:00Z'),
+    endTime: new Date('2023-01-01T01:00:00Z'), // 1/1/2023, 1:00:00 AM
   },
   {
-    name: 'Business meeting',
-    startTime: new Date('2023-03-26T09:00:00Z'),
-    endTime: new Date('2023-03-26T10:00:00Z'),
+    name: 'Business conference',
+    startTime: new Date('2023-06-15T09:00:00Z'),
+    endTime: new Date('2023-06-17T18:00:00Z'), // 6/17/2023, 6:00:00 PM
   },
   {
-    name: 'Movie screening',
-    startTime: new Date('2023-03-26T12:30:00Z'),
-    endTime: new Date('2023-03-26T14:00:00Z'),
+    name: 'Product launch',
+    startTime: new Date('2023-07-01T10:00:00Z'),
+    endTime: new Date('2023-07-01T12:00:00Z'), // 7/1/2023, 12:00:00 PM
   },
   {
-    name: 'Networking event',
-    startTime: new Date('2023-03-24T13:00:00Z'),
-    endTime: new Date('2023-03-24T15:00:00Z'),
+    name: 'Team building retreat',
+    startTime: new Date('2023-08-15T09:00:00Z'),
+    endTime: new Date('2023-08-17T18:00:00Z'), // 8/17/2023, 6:00:00 PM
   },
 ];
 
+// Business logic
+function getFutureReservations() {
+  const currentDateTime = new Date();
+  return reservations.filter(
+    (reservation) => reservation.endTime > currentDateTime
+  );
+}
 // Endpoints
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -53,5 +61,6 @@ app.post('/reservation', (req, res) => {
 
 // GET all future reservations
 app.get('/reservations', (req, res) => {
-  // TODO: Return all reservations that have not passed
+  const futureReservations = getFutureReservations();
+  res.send(futureReservations);
 });
