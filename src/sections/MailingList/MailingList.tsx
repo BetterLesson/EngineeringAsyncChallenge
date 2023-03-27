@@ -56,7 +56,7 @@ const MailingList = () => {
       id="mailing-list"
       className="mt-10 tablet:mt-20"
     >
-      <div className="relative flex justify-center h-auto bg-center bg-cover bg-mailing-list">
+      <div className="relative flex justify-center h-auto py-10 bg-center bg-cover bg-mailing-list">
         <div className="absolute top-0 left-0 z-0 w-full h-full bg-blue-800 opacity-50"></div>
         <div className="z-10 py-5 laptop:py-10">
           <h3 className="mb-4 text-xl font-semibold text-center text-white tablet:text-2xl">
@@ -125,7 +125,7 @@ const MailingList = () => {
               <div className="flex justify-center">
                 {' '}
                 <button
-                  className="px-4 py-2 text-white bg-blue-800 tablet:px-6"
+                  className="px-4 py-2 text-base text-lg text-white bg-blue-800 tablet:px-6"
                   type="submit"
                 >
                   Sign Up
