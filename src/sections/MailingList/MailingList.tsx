@@ -32,7 +32,7 @@ const MailingList = () => {
     }
 
     if (!isValidFullName(fullName)) {
-      setErrorMessage('Please enter a valid full name');
+      setErrorMessage('Please enter first and last name');
       return;
     }
 
