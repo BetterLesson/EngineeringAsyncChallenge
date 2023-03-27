@@ -26,9 +26,14 @@ const doesNotConflictWithExistingReservations = (
     return start < existingEnd && end > existingStart;
   });
 };
+const isValidFormat = (reservation) =>
+  reservation.hasOwnProperty('name') &&
+  reservation.hasOwnProperty('startTime') &&
+  reservation.hasOwnProperty('endTime');
 
 module.exports = {
   getFutureReservations,
   isInFuture,
   doesNotConflictWithExistingReservations,
+  isValidFormat,
 };

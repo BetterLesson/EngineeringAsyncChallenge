@@ -11,6 +11,7 @@ const {
   isInFuture,
   doesNotConflictWithExistingReservations,
   getFutureReservations,
+  isValidFormat,
 } = require('./utils.js');
 
 app.use(bodyParser.json());
@@ -31,21 +32,40 @@ app.get('/reservation', (req, res) => {
 
 // POST reservation
 app.post('/reservation', (req, res) => {
-  const reservation = req.body;
+  const submittedData = req.body;
+
+  // Check if reservation has valid format. Must have name, startTime, and endTime properties
+  if (!isValidFormat(submittedData)) {
+    return res
+      .status(400)
+      .send(
+        'Invalid reservation format. Must have name, startTime, and endTime properties.'
+      );
+  }
 
   // Check if reservation is in the future
-  if (!isInFuture(reservation)) {
+  if (!isInFuture(submittedData)) {
     return res.status(400).send('Reservation must be in the future');
   }
 
   // Check if reservation conflicts with existing reservations
-  if (!doesNotConflictWithExistingReservations(reservation, reservations)) {
+  if (!doesNotConflictWithExistingReservations(submittedData, reservations)) {
     return res
       .status(400)
       .send('Reservation conflicts with existing reservation');
   }
 
-  reservations.push(reservation);
+  // Create new reservation object with only the properties needed
+  const newReservation = {
+    name: submittedData.name,
+    startTime: submittedData.startTime,
+    endTime: submittedData.endTime,
+  };
+
+  // Add new reservation to reservations array
+  reservations.push(newReservation);
+
+  // Send success message
   res.status(201).send('Reservation successfully added');
 });
 
