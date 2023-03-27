@@ -33,33 +33,33 @@ app.get('/reservation', (req, res) => {
 
 // POST reservation
 app.post('/reservation', (req, res) => {
-  const submittedData = req.body;
+  const submittedReservation = req.body;
 
   // Check if reservation has valid format. Must have name, startTime, and endTime properties
-  if (!hasRequiredKeys(submittedData)) {
+  if (!hasRequiredKeys(submittedReservation))
     return res
       .status(400)
       .send(
-        'Invalid reservation format. Must have name, startTime, and endTime properties.'
+        'Invalid submitted reservation format. Must have name, startTime, and endTime properties.'
       );
-  }
 
   // Check if reservation has valid dates
-  if (!haveValidDates(submittedData)) {
-    return res.status(400).send('Submitted reservation has invalid dates');
-  }
+  if (!haveValidDates(submittedReservation))
+    res.status(400).send('Submitted reservation has invalid dates');
 
   // Check if reservation is in the future
-  if (!isInFuture(submittedData)) {
-    return res.status(400).send('Reservation must be in the future');
-  }
+  if (!isInFuture(submittedReservation))
+    return res.status(400).send('Submitted reservation must be in the future');
 
   // Check if reservation conflicts with existing reservations
-  if (!doesNotConflictWithExistingReservations(submittedData, reservations)) {
+  if (
+    !doesNotConflictWithExistingReservations(submittedReservation, reservations)
+  )
     return res
       .status(400)
-      .send('Reservation conflicts with existing reservation');
-  }
+      .send(
+        'Submitted reservation time conflicts with existing reservations times'
+      );
 
   // Create new reservation object with only the required properties
   const newReservation = {
