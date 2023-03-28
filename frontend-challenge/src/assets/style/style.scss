@@ -1,0 +1,131 @@
+@import './override.scss';
+
+html {
+  font-size: 16px;
+}
+
+.banner {
+  color: #fff;
+  height: $section-height; 
+  background-image: url('../images/hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .banner-padding {
+    position: relative;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: $section-height;
+    background-color: $overlay-color;
+  }
+  .banner-padding {
+    padding: 10vh;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .logo{
+    width: 90px;
+  }  
+  button {
+    font-size: 1.4rem;
+  }
+}
+
+.coachingExperts {
+  border-top: 1px rgb(208,215,222) solid;
+  border-bottom: 1px rgb(208,215,222) solid;
+  background-color: rgb(251,251,248);
+  table {
+    max-width: 40vw;
+    th {
+      border: none;
+      vertical-align: middle;
+      text-align: left;
+      font-size: 1.2rem;
+    }
+    td {
+      border-top-width: 2px;
+      border-color: rgb(174,174,174);
+      font-size: 1.4rem;
+      font-weight: 300;
+      border-bottom: none;
+    }
+  }
+  h2 {
+    color:$primary;
+    font-size: 3rem;
+  }
+}
+
+.contactFormSection {
+  background-image: url('../images/mailinglist.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  .contactFormContainer {
+    position: relative;
+    h2 {
+      color: white;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $overlay-color;
+  }
+  .contactForm {
+    background-color: rgb(207,208,217, 0.9);
+    max-width: 90vh;
+    margin: auto;
+    h2 {
+      font-weight: 400;
+      font-size: 1.95rem;
+      color: #000;
+    }
+    label {
+      font-size: 1.3rem;
+    }
+    input {
+      font-size: 1.2rem;
+      &::placeholder {
+        font-style: italic;
+        font-size: 1.2rem;
+      }
+    }
+    select {
+      font-size: 1.2rem;
+    }
+  }
+  button {
+    font-size: 1.4rem;
+  }
+}
+
+footer {
+  h6 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
