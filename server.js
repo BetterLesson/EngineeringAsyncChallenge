@@ -9,7 +9,7 @@ const port = 3000;
 const reservations = require('./data.js');
 const {
   isInFuture,
-  doesNotConflictWithExistingReservations,
+  conflictsWithOtherReservations,
   getFutureReservations,
   hasRequiredKeys,
   haveValidDates,
@@ -52,9 +52,7 @@ app.post('/reservation', (req, res) => {
     return res.status(400).send('Submitted reservation must be in the future');
 
   // Check if reservation conflicts with existing reservations
-  if (
-    !doesNotConflictWithExistingReservations(submittedReservation, reservations)
-  )
+  if (conflictsWithOtherReservations(submittedReservation, reservations))
     return res
       .status(400)
       .send(

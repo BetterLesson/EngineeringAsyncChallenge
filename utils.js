@@ -12,20 +12,26 @@ const isInFuture = (reservation) => {
   return new Date(startTime) > now;
 };
 
-const doesNotConflictWithExistingReservations = (
+const conflictsWithOtherReservations = (
   { startTime, endTime },
   reservations
 ) => {
-  const start = new Date(startTime);
-  const end = new Date(endTime);
+  const start1 = new Date(startTime);
+  const end1 = new Date(endTime);
 
-  return !reservations.some((existingReservation) => {
-    const existingStart = new Date(existingReservation.startTime);
-    const existingEnd = new Date(existingReservation.endTime);
+  return reservations.some((reservation) => {
+    const start2 = new Date(reservation.startTime);
+    const end2 = new Date(reservation.endTime);
 
-    return start < existingEnd && end > existingStart;
+    return (
+      (start1 >= start2 && start1 < end2) ||
+      (end1 > start2 && end1 <= end2) ||
+      (start1 <= start2 && end1 >= end2) ||
+      (start1 >= start2 && end1 <= end2)
+    );
   });
 };
+
 const hasRequiredKeys = (reservation) =>
   reservation.hasOwnProperty('name') &&
   reservation.hasOwnProperty('startTime') &&
@@ -38,7 +44,7 @@ const haveValidDates = ({ startTime, endTime }) => {
 module.exports = {
   getFutureReservations,
   isInFuture,
-  doesNotConflictWithExistingReservations,
+  conflictsWithOtherReservations,
   hasRequiredKeys,
   haveValidDates,
 };
