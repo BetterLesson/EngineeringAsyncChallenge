@@ -23,6 +23,10 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
+app.get('/', (req, res) => {
+  res.send(reservations);
+});
+
 // GET all future reservations
 app.get('/reservation', (req, res) => {
   // Get future reservations
