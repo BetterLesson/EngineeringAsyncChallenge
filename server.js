@@ -63,9 +63,9 @@ app.post('/reservation', (req, res) => {
 
   // Create new reservation object with only the required properties
   const newReservation = {
-    name: submittedData.name,
-    startTime: submittedData.startTime,
-    endTime: submittedData.endTime,
+    name: submittedReservation.name,
+    startTime: submittedReservation.startTime,
+    endTime: submittedReservation.endTime,
   };
 
   // Add new reservation to reservations array
