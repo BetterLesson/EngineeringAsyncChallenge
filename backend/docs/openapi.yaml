@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: BetterLesson Event Reservation Stub
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+paths:
+  /reservation:
+    get:
+      tags:
+        - event
+      summary: Finds reservations for user
+      operationId: findReservations
+      parameters:
+        - name: userId
+          in: query
+          description: User id being requested
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Reservation'
+        '404':
+          description: User does not exist
+    post:
+      tags:
+        - event
+      summary: Adds a new reservation for an event for a specific user
+      operationId: addReservation
+      requestBody:
+        description: Adds a new reservation
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Reservation'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Reservation'
+        '400':
+          description: Invalid input
+        '404':
+          description: Event not found
+components:
+  schemas:
+    Reservation:
+      type: object
+      properties:
+        id:
+          type: string
+          example: myusername
+        event:
+          type: string
+          example: Global Hack-a-thon
+        startTime:
+          type: string
+          format: date-time
+        endTime:
+          type: string
+          format: date-time
+  requestBodies:
+    Reservation:
+      description: An event registration
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Reservation'

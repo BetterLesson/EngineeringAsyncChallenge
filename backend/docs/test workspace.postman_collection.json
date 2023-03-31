@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "6b936c62-9b63-42f2-82cc-077a183c5d0c",
+		"name": "test workspace",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4491876"
+	},
+	"item": [
+		{
+			"name": "Reservation GET success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reservation?userId=myusername",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reservation"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "myusername"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation POST success",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": \"myusername\",\r\n  \"event\": \"New Event\",\r\n  \"startTime\": \"2023-04-04T15:00:00Z\",\r\n  \"endTime\": \"2023-04-07T00:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/reservation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation same event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": \"myusername\",\r\n  \"event\": \"Global Hack-a-thon\",\r\n  \"startTime\": \"2024-04-04T15:00:00Z\",\r\n  \"endTime\": \"2024-04-07T00:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/reservation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation time overlap",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": \"myusername\",\r\n  \"event\": \"New Event Overlap\",\r\n  \"startTime\": \"2023-03-30T15:00:00Z\",\r\n  \"endTime\": \"2023-04-07T00:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/reservation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation event in past",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": \"myusername\",\r\n  \"event\": \"New Event Overlap\",\r\n  \"startTime\": \"2022-03-30T15:00:00Z\",\r\n  \"endTime\": \"2022-04-07T00:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/reservation",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reservation GET bad user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reservation?userId=myusernam",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reservation"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "myusernam"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:3000",
+			"type": "string"
+		}
+	]
+}
