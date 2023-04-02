@@ -1,0 +1,47 @@
+.App {
+  background-color: #130F24;
+}
+
+.register-section{
+  background-color: #1D1B3D;
+  color:white;
+}
+
+.coachCard{
+  background-color: #1D1B3D;
+}
+
+.md-green{
+  color:#c2ffe7;
+}
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+.image {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../src/assets/mailinglist.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.5);
+}
+

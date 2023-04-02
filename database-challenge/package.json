@@ -1,0 +1,24 @@
+{
+  "name": "challenge-three",
+  "version": "1.0.0",
+  "description": "betterlesson-takehome-database-challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm test"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "keywords": [
+    "exam"
+  ],
+  "author": "Evon Perez",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3"
+  }
+}
