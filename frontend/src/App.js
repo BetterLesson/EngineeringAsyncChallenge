@@ -1,5 +1,3 @@
-// import logo from "./logo.svg";
-// import './App.css';
 import CompanyTitle from "./components/CompanyTitle/CompanyTitle";
 import CoachingExpertsTable from "./components/CoachingExperts/CoachingExperts";
 import ContactForm from "./components/ContactForm/ContactForm";
