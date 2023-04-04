@@ -6,6 +6,37 @@ function ContactForm() {
   const [email, setEmail] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
 
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  function handleDropdownChange(event) {
+    setSelectedOption(event.target.value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (
+      name.trim() === "" ||
+      email.trim() === "" ||
+      selectedOption.trim() === ""
+    ) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    console.log("Form submitted:", { name, email, selectedOption });
+  };
+
   return (
     <div className="form-container">
       <h1 className="form-headline">Join our mailing list</h1>
