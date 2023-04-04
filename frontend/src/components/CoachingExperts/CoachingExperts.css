@@ -1,0 +1,22 @@
+.table-container {
+    width: 45%;
+    margin-left: 5%;
+    text-align: center;
+
+}
+
+.coaching-container {
+    display: flex;
+    align-items: center;
+    width: 100%
+}
+
+.coaching-pic {
+    margin-right: 1rem;
+    width: 45%
+}
+
+.table-name {
+    color: blue;
+
+}
