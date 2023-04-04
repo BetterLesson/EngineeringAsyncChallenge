@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Engineering Asynchronous Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Front End Challenge
 
-## Available Scripts
+We have an exciting new opportunity to expand our coaching services to additional industries beyond K-12 education. To prepare for this new service offering, we need you to quickly build a new web page for them with the following requirements:
 
-In the project directory, you can run:
+- Company name title
 
-### `npm start`
+- A table that previews initial coaching experts that will be available at launch. Please create this table using a solution other than HTML table tags. A good solution is easily styled and resuable within the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Company logo as icon in browser tab
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Contact us web form that captures contact information for interested users
 
-### `npm test`
+- Basic validation of web form before submission
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Dump all the information from the form submission to browser console
 
-### `npm run build`
+Coaching experts table:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Coach Name | Available Starting | Industry              |
+| ---------- | ------------------ | --------------------- |
+| Jessica D. | 11/6/22            | Professional Services |
+| David F.   | 8/5/21             | Sports/Fitness        |
+| Keir Y.    | 4/12/22            | E-Sports              |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+** Note ** - A possible UI design of this webpage has been provided in the project. You should take any creative liberties you would like with this challenge however.
