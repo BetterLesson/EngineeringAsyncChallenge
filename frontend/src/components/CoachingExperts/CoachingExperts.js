@@ -30,3 +30,15 @@ const coachingExperts = [
     industry: "E-Sports",
   },
 ];
+
+const theme = createTheme({
+  overrides: {
+    MuiTable: {
+      root: {
+        width: "100%",
+        boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.2)",
+        textAlign: "center",
+      },
+    },
+  },
+});
