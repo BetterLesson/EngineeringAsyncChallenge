@@ -42,3 +42,9 @@ const theme = createTheme({
     },
   },
 });
+
+function CoachingExpertsTable() {
+  return <div>Placeholder Code</div>;
+}
+
+export default CoachingExpertsTable;
