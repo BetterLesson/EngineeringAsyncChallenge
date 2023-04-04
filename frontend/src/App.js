@@ -3,6 +3,7 @@
 import CompanyTitle from "./components/CompanyTitle/CompanyTitle";
 import CoachingExpertsTable from "./components/CoachingExperts/CoachingExperts";
 import ContactForm from "./components/ContactForm/ContactForm";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <CompanyTitle />
       <CoachingExpertsTable />
       <ContactForm />
+      <Footer />
     </div>
   );
 }
