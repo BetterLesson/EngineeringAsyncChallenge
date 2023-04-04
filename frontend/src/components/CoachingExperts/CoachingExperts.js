@@ -44,7 +44,40 @@ const theme = createTheme({
 });
 
 function CoachingExpertsTable() {
-  return <div>Placeholder Code</div>;
+  return (
+    <div className="coaching-container">
+      <img src={CoachingPhoto} alt="coaching" className="coaching-pic" />
+      <div className="table-container">
+        <ThemeProvider theme={theme}>
+          <Typography variant="h2" gutterBottom className="table-name">
+            Current Coaches
+          </Typography>
+          <TableContainer component={Paper}>
+            <Table className="coaching-experts-table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Coach Name</TableCell>
+                  <TableCell>Available Starting</TableCell>
+                  <TableCell>Industry</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {coachingExperts.map((expert) => (
+                  <TableRow key={expert.name}>
+                    <TableCell component="th" scope="row">
+                      {expert.name}
+                    </TableCell>
+                    <TableCell>{expert.starting}</TableCell>
+                    <TableCell>{expert.industry}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </ThemeProvider>
+      </div>
+    </div>
+  );
 }
 
 export default CoachingExpertsTable;
