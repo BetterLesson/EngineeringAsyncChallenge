@@ -1,6 +1,10 @@
 import React from "react";
 import "./CompanyTitle.css";
 
+function handleClick() {
+  console.log("Register Now Button Clicked");
+}
+
 function CompanyTitle() {
   return (
     <div className="company-title-container">
