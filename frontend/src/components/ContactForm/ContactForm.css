@@ -1,0 +1,10 @@
+.form-container {
+    background-image: url("../../images/mailinglist.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 5%;
+    margin-top: 10px;
+}
