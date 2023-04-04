@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import CoachingPhoto from "../../images/coaching.png";
 import { createTheme, ThemeProvider } from "@material-ui/core";
-import "./ExpertsTable.css";
+import "./CoachingExperts.css";
 
 const coachingExperts = [
   {
